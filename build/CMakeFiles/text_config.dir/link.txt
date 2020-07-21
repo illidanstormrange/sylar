@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/text_config.dir/text_config.cc.o  -o text_config -Wl,-rpath,/home/illidan/file/cppfile/firstProject/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread 

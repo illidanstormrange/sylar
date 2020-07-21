@@ -1,0 +1,6 @@
+/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles/rebuild_cache.dir
+/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles/edit_cache.dir
+/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles/test_thread.dir
+/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles/text_config.dir
+/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles/sylar.dir
+/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles/test.dir
