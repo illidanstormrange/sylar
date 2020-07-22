@@ -233,6 +233,7 @@ template<class T, class FromStr = LexicalCast<std::string, T>,
 		class ToStr = LexicalCast<T, std::string> >
 class ConfigVar : public ConfigVarBase {
 public:
+	typedef RWMutex RWMutexType;
 	typedef std::shared_ptr<ConfigVar> ptr;
 	typedef std::function<void (const T& old_value, const T& new_value)> on_change_cb;
 	ConfigVar(const std::string& name, 
@@ -243,6 +244,7 @@ public:
 	std::string toString() override {
 		try {
 			//return boost::lexical_cast<std::string>(m_val); 
+			RWMutexType::ReadLock lock(m_mutex);
 			return ToStr()(m_val);
 		}catch(std::exception e) {
 			SYLAR_LOG_ERROR(SYLAR_LOG_ROOT()) << "ConfigVar::toString exception" << e.what()
@@ -263,46 +265,62 @@ public:
 	}
 	std::string getTypeid() const override { return typeid(T).name(); }
 
-	void addListener(uint64_t type,  on_change_cb cb) {
-		m_cbs[type] = cb;
+	uint64_t addListener(on_change_cb cb) {
+		static uint64_t s_fun_id = 0;
+		RWMutexType::WriteLock lock(m_mutex);
+		++s_fun_id;
+		m_cbs[s_fun_id] = cb;
+		return s_fun_id;
 	}
 	
 	void delListener(uint64_t type) {
+		RWMutexType::WriteLock lock(m_mutex);
 		m_cbs.earse(type);
 	}
 
 	on_change_cb getListener(uint64_t type) {
+		RWMutexType::ReadLock lock(m_mutex);
 		auto it = m_cbs.find(type);
 		return it == m_cbs.end() ? nullptr : it->second;
 	}
 	void clearListener() {
+		RWMutexType::WriteLock lock(m_mutex);
 		m_cbs.clear();
 	}
 
-	const T getValue() const { return m_val; }
+	const T getValue() { 
+		RWMutexType::ReadLock lock(m_mutex);
+		return m_val;
+	}
 	void setValue(const T& v) {
-		if(v == m_val) {
-			return;
+		{
+			RWMutexType::ReadLock lock(m_mutex);
+			if(v == m_val) {
+				return;
+			}
+			for(auto i : m_cbs) {
+				i.second(m_val, v);
+			}
 		}
-		for(auto i : m_cbs) {
-			i.second(m_val, v);
-		}
+		RWMutexType::WriteLock lock(m_mutex);
 		m_val = v;
 	}
 private:
 	T m_val;
-
+	RWMutexType m_mutex;
 	std::map<uint64_t, on_change_cb> m_cbs;
+
 };
 
 class Config 
 {
 public:
 	typedef std::unordered_map<std::string, ConfigVarBase::ptr> ConfigVarMap;
-	
+	typedef RWMutex RWMutexType;
 	template<class T>
 		static typename ConfigVar<T>::ptr Lookup(const std::string& name,
 				const T& default_value, const std::string& description = "") {
+			RWMutexType::ReadLock lock(GetMutex());
 			auto it = GetDatas().find(name);
 			if(it != GetDatas().end()) {
 				auto tmp = std::dynamic_pointer_cast<ConfigVar<T> >(it->second);
@@ -325,6 +343,7 @@ public:
 		}
 	template<class T>
 		static typename ConfigVar<T>::ptr Lookup(const std::string& name) {
+			RWMutexType::ReadLock lock(GetMutex());
 			auto it = GetDatas().find(name);
 			if(it == GetDatas().end()) {
 				return nullptr;
@@ -335,7 +354,13 @@ public:
 	static void LoadFromYaml(const YAML::Node& root);
 
 	static ConfigVarBase::ptr LookupBase(const std::string& name);
+
+	static void Visit(std::function<void(ConfigVarBase::ptr)>& cb); 
 private:
+	static RWMutexType& GetMutex() {
+		static RWMutexType m_mutex;
+		return m_mutex;
+	}
 	static ConfigVarMap& GetDatas (){
 		static ConfigVarMap s_datas;
 		return s_datas;
