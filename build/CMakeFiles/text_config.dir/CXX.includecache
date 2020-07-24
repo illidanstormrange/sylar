@@ -107,4 +107,8 @@ stdint.h
 -
 iostream
 -
+vector
+-
+string
+-
 

@@ -114,30 +114,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_thread
+# Target rules for targets named test
 
 # Build rule for target.
-test_thread: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_thread
-.PHONY : test_thread
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-test_thread/fast:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-.PHONY : test_thread/fast
-
-#=============================================================================
-# Target rules for targets named text_config
-
-# Build rule for target.
-text_config: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 text_config
-.PHONY : text_config
-
-# fast build rule for target.
-text_config/fast:
-	$(MAKE) -f CMakeFiles/text_config.dir/build.make CMakeFiles/text_config.dir/build
-.PHONY : text_config/fast
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 #=============================================================================
 # Target rules for targets named sylar
@@ -153,17 +140,56 @@ sylar/fast:
 .PHONY : sylar/fast
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named text_config
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+text_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_config
+.PHONY : text_config
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+text_config/fast:
+	$(MAKE) -f CMakeFiles/text_config.dir/build.make CMakeFiles/text_config.dir/build
+.PHONY : text_config/fast
+
+#=============================================================================
+# Target rules for targets named test_thread
+
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
+
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
+#=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
+
+#=============================================================================
+# Target rules for targets named test_fiber
+
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
+
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
 
 config.o: config.cc.o
 
@@ -191,6 +217,33 @@ config.s: config.cc.s
 config.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/config.cc.s
 .PHONY : config.cc.s
+
+fiber.o: fiber.cc.o
+
+.PHONY : fiber.o
+
+# target to build an object file
+fiber.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/fiber.cc.o
+.PHONY : fiber.cc.o
+
+fiber.i: fiber.cc.i
+
+.PHONY : fiber.i
+
+# target to preprocess a source file
+fiber.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/fiber.cc.i
+.PHONY : fiber.cc.i
+
+fiber.s: fiber.cc.s
+
+.PHONY : fiber.s
+
+# target to generate assembly for a file
+fiber.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/fiber.cc.s
+.PHONY : fiber.cc.s
 
 log.o: log.cc.o
 
@@ -246,6 +299,33 @@ test.cc.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cc.s
 .PHONY : test.cc.s
 
+test_fiber.o: test_fiber.cc.o
+
+.PHONY : test_fiber.o
+
+# target to build an object file
+test_fiber.cc.o:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test_fiber.cc.o
+.PHONY : test_fiber.cc.o
+
+test_fiber.i: test_fiber.cc.i
+
+.PHONY : test_fiber.i
+
+# target to preprocess a source file
+test_fiber.cc.i:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test_fiber.cc.i
+.PHONY : test_fiber.cc.i
+
+test_fiber.s: test_fiber.cc.s
+
+.PHONY : test_fiber.s
+
+# target to generate assembly for a file
+test_fiber.cc.s:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test_fiber.cc.s
+.PHONY : test_fiber.cc.s
+
 test_thread.o: test_thread.cc.o
 
 .PHONY : test_thread.o
@@ -272,6 +352,33 @@ test_thread.s: test_thread.cc.s
 test_thread.cc.s:
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test_thread.cc.s
 .PHONY : test_thread.cc.s
+
+test_util.o: test_util.cc.o
+
+.PHONY : test_util.o
+
+# target to build an object file
+test_util.cc.o:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/test_util.cc.o
+.PHONY : test_util.cc.o
+
+test_util.i: test_util.cc.i
+
+.PHONY : test_util.i
+
+# target to preprocess a source file
+test_util.cc.i:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/test_util.cc.i
+.PHONY : test_util.cc.i
+
+test_util.s: test_util.cc.s
+
+.PHONY : test_util.s
+
+# target to generate assembly for a file
+test_util.cc.s:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/test_util.cc.s
+.PHONY : test_util.cc.s
 
 text_config.o: text_config.cc.o
 
@@ -362,22 +469,33 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test_thread"
-	@echo "... text_config"
-	@echo "... sylar"
 	@echo "... test"
+	@echo "... sylar"
+	@echo "... text_config"
+	@echo "... test_thread"
+	@echo "... test_util"
+	@echo "... test_fiber"
 	@echo "... config.o"
 	@echo "... config.i"
 	@echo "... config.s"
+	@echo "... fiber.o"
+	@echo "... fiber.i"
+	@echo "... fiber.s"
 	@echo "... log.o"
 	@echo "... log.i"
 	@echo "... log.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
+	@echo "... test_fiber.o"
+	@echo "... test_fiber.i"
+	@echo "... test_fiber.s"
 	@echo "... test_thread.o"
 	@echo "... test_thread.i"
 	@echo "... test_thread.s"
+	@echo "... test_util.o"
+	@echo "... test_util.i"
+	@echo "... test_util.s"
 	@echo "... text_config.o"
 	@echo "... text_config.i"
 	@echo "... text_config.s"

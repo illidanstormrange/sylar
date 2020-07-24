@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/test_fiber.dir/test_fiber.cc.o  -o test_fiber -Wl,-rpath,/home/illidan/file/cppfile/firstProject/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread 

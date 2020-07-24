@@ -12,7 +12,7 @@ int main()
 
 	logger->addAppender(file_appender);
 	sylar::LogEvent::ptr event(new sylar::LogEvent(logger, sylar::LogLevel::DEBUG,
-				__FILE__, __LINE__, 0, 1, 2, time(0)));
+				__FILE__, __LINE__, 0, 1, 2, time(0), sylar::Thread::GetName()));
 	event->getSS() << "test xxx";
 	std::cout << "hello world!" << std::endl;
 	SYLAR_LOG_INFO(logger);

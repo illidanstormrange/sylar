@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/test_util.dir/test_util.cc.o  -o test_util -Wl,-rpath,/home/illidan/file/cppfile/firstProject/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread 
