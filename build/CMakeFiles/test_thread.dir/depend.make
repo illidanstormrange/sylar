@@ -5,6 +5,7 @@ CMakeFiles/test_thread.dir/test_thread.cc.o: ../config.h
 CMakeFiles/test_thread.dir/test_thread.cc.o: ../fiber.h
 CMakeFiles/test_thread.dir/test_thread.cc.o: ../log.h
 CMakeFiles/test_thread.dir/test_thread.cc.o: ../macro.h
+CMakeFiles/test_thread.dir/test_thread.cc.o: ../scheduler.h
 CMakeFiles/test_thread.dir/test_thread.cc.o: ../singleton.h
 CMakeFiles/test_thread.dir/test_thread.cc.o: ../sylar.h
 CMakeFiles/test_thread.dir/test_thread.cc.o: ../test_thread.cc

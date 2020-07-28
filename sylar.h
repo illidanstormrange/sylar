@@ -3,6 +3,7 @@
 
 #include "log.h"
 #include "thread.h"
+#include "scheduler.h"
 #include "config.h"
 #include "singleton.h"
 #include "util.h"

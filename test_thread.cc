@@ -13,9 +13,6 @@ void func1() {
 							 << " thread id : " << sylar::GetThreadId()
 							 << " this.id : " << sylar::Thread::GetThis()->getId();
 	//sleep(20);
-	for(int i = 0; i < 1000000000; ++i) {
-		++count;
-	}
 }
 
 void func2() {

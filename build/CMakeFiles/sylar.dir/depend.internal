@@ -14,6 +14,7 @@ CMakeFiles/sylar.dir/fiber.cc.o
  /home/illidan/file/cppfile/firstProject/sylar/fiber.h
  /home/illidan/file/cppfile/firstProject/sylar/log.h
  /home/illidan/file/cppfile/firstProject/sylar/macro.h
+ /home/illidan/file/cppfile/firstProject/sylar/scheduler.h
  /home/illidan/file/cppfile/firstProject/sylar/singleton.h
  /home/illidan/file/cppfile/firstProject/sylar/thread.h
  /home/illidan/file/cppfile/firstProject/sylar/util.h
@@ -21,6 +22,15 @@ CMakeFiles/sylar.dir/log.cc.o
  /home/illidan/file/cppfile/firstProject/sylar/config.h
  /home/illidan/file/cppfile/firstProject/sylar/log.cc
  /home/illidan/file/cppfile/firstProject/sylar/log.h
+ /home/illidan/file/cppfile/firstProject/sylar/singleton.h
+ /home/illidan/file/cppfile/firstProject/sylar/thread.h
+ /home/illidan/file/cppfile/firstProject/sylar/util.h
+CMakeFiles/sylar.dir/scheduler.cc.o
+ /home/illidan/file/cppfile/firstProject/sylar/fiber.h
+ /home/illidan/file/cppfile/firstProject/sylar/log.h
+ /home/illidan/file/cppfile/firstProject/sylar/macro.h
+ /home/illidan/file/cppfile/firstProject/sylar/scheduler.cc
+ /home/illidan/file/cppfile/firstProject/sylar/scheduler.h
  /home/illidan/file/cppfile/firstProject/sylar/singleton.h
  /home/illidan/file/cppfile/firstProject/sylar/thread.h
  /home/illidan/file/cppfile/firstProject/sylar/util.h

@@ -5,6 +5,7 @@ CMakeFiles/test_fiber.dir/test_fiber.cc.o: ../config.h
 CMakeFiles/test_fiber.dir/test_fiber.cc.o: ../fiber.h
 CMakeFiles/test_fiber.dir/test_fiber.cc.o: ../log.h
 CMakeFiles/test_fiber.dir/test_fiber.cc.o: ../macro.h
+CMakeFiles/test_fiber.dir/test_fiber.cc.o: ../scheduler.h
 CMakeFiles/test_fiber.dir/test_fiber.cc.o: ../singleton.h
 CMakeFiles/test_fiber.dir/test_fiber.cc.o: ../sylar.h
 CMakeFiles/test_fiber.dir/test_fiber.cc.o: ../test_fiber.cc

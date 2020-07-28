@@ -86,6 +86,22 @@ string.h
 assert.h
 -
 
+/home/illidan/file/cppfile/firstProject/sylar/scheduler.h
+thread.h
+/home/illidan/file/cppfile/firstProject/sylar/thread.h
+fiber.h
+/home/illidan/file/cppfile/firstProject/sylar/fiber.h
+macro.h
+/home/illidan/file/cppfile/firstProject/sylar/macro.h
+memory.h
+-
+string
+-
+list
+-
+vector
+-
+
 /home/illidan/file/cppfile/firstProject/sylar/singleton.h
 
 /home/illidan/file/cppfile/firstProject/sylar/sylar.h
@@ -93,6 +109,8 @@ log.h
 /home/illidan/file/cppfile/firstProject/sylar/log.h
 thread.h
 /home/illidan/file/cppfile/firstProject/sylar/thread.h
+scheduler.h
+/home/illidan/file/cppfile/firstProject/sylar/scheduler.h
 config.h
 /home/illidan/file/cppfile/firstProject/sylar/config.h
 singleton.h

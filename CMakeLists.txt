@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(sylar)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
-set(CMKAE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -oO -ggbd -std=c++11 -Wall -Wno-deprecated")
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated")
 
 include_directories(.)
 include_directories(/usr/include)
@@ -16,6 +16,7 @@ set(LIB_SRC
 	util.cc
 	config.cc
 	thread.cc
+	scheduler.cc
 	fiber.cc
 	)
 add_library(sylar SHARED ${LIB_SRC})
@@ -47,4 +48,8 @@ target_link_libraries(test_util sylar -L/usr/lib -lyaml-cpp -lpthread)
 add_executable(test_fiber test_fiber.cc)
 add_dependencies(test_fiber sylar)
 target_link_libraries(test_fiber sylar -L/usr/lib -lyaml-cpp -lpthread)
+
+add_executable(test_scheduler test_scheduler.cc)
+add_dependencies(test_scheduler sylar)
+target_link_libraries(test_scheduler sylar -L/usr/lib -lyaml-cpp -lpthread)
 

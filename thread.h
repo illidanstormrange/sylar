@@ -208,7 +208,7 @@ private:
 class Thread {
 public:
 	typedef std::shared_ptr<Thread> ptr;
-	Thread(std::function<void()> cb, const std::string name);
+	Thread(std::function<void()> cb, const std::string& name);
 	~Thread();
 
 	pid_t getId() const { return m_id; }

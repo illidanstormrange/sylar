@@ -3,6 +3,7 @@
 
 #include "thread.h"
 #include "fiber.h"
+#include "macro.h"
 #include <memory.h>
 #include <string>
 #include <list>
@@ -15,10 +16,10 @@ public:
 	typedef std::shared_ptr<Scheduler> ptr;
 	typedef Mutex MutexType;
 
-	Scheduler(size_t threads = -1, bool use_call = true, const std::string name = "");
+	Scheduler(size_t threads = 1, bool use_call = true, const std::string& name = "");
 	virtual ~Scheduler();
 
-	const std::string getName const { return m_name; }
+	const std::string& getName() const { return m_name; }
 
 	static Scheduler* GetThis();
 	static Fiber* GetMainFiber();
@@ -45,20 +46,25 @@ public:
 		{
 			MutexType::Lock lock(m_mutex);
 			while(begin != end) {
-				need_tickle = schedulerNoLock(&*begin) || need_tickle;
+				need_tickle = schedulerNoLock(&*begin, -1) || need_tickle;
+				++begin;
 			}
 			if(need_tickle) {
 				tickle();
 			}
 		}
 	}
+
 protected:
 	virtual void tickle();
 	void run();
-	virtual void stopping();
+	virtual bool stopping();
+	virtual void idle();
+
+	void setThis();
 private:
 	template<class FiberOrCb>
-	void schedulerNoLock(FiberOrCb fc, int thread) {
+	bool schedulerNoLock(FiberOrCb fc, int thread) {
 		bool need_tickle = m_fibers.empty();
 		FiberAndThread ft(fc, thread);
 		if(ft.fiber || ft.thread) {
@@ -84,7 +90,7 @@ private:
 
 		FiberAndThread(std::function<void()> f, int thr) 
 			:cb(f), thread(thr){
-		
+		}		
 		FiberAndThread(std::function<void()>* f, int thr) 
 			:thread(thr){
 				cb.swap(*f);
@@ -99,13 +105,13 @@ private:
 			cb = nullptr;
 			thread = -1;
 		}
-};
+	};
 private:
 	std::string m_name;
 	MutexType m_mutex;
 	Fiber::ptr m_rootFiber;
 	std::vector<Thread::ptr> m_threads;
-	std::list<Fiber::ptr> m_fibers;
+	std::list<FiberAndThread> m_fibers;
 protected:
 	std::vector<int> m_threadIds;
 	size_t m_threadCount = 0;

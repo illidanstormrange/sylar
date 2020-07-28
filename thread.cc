@@ -30,7 +30,7 @@ void Semaphore::notify() {
 	}
 }
 
-Thread::Thread(std::function<void()> cb, const std::string name) 
+Thread::Thread(std::function<void()> cb, const std::string& name) 
 	:m_cbs(cb)
 	 ,m_name(name)
 {
@@ -73,8 +73,8 @@ void* Thread::run(void* arg) {
 
 	std::function<void()> cb;
 	cb.swap(thread->m_cbs);
-	cb();
 	thread->m_semaphore.notify();
+	cb();
 	return 0;
 }
 
