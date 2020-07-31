@@ -2,19 +2,21 @@
 #define __SYLAR_IO_MANAGER_H__
 
 #include "scheduler.h"
+#include <atomic>
+#include "timer.h"
 
 namespace sylar {
 
-class IOManager : public Scheduler {
+class IOManager : public Scheduler, public TimerManager {
 public:
 	typedef std::shared_ptr<IOManager> ptr;
 	typedef RWMutex RWMutexType;
 
 	enum Event {
-		NONE	= 0x0;
-		READ	= 0x1;
-		WRITE	= 0x2;
-	}
+		NONE	= 0x0,
+		READ	= 0x1,
+		WRITE	= 0x4,
+	};
 private:
 	struct FdContext {
 		typedef Mutex MutexType;
@@ -29,16 +31,16 @@ private:
 		void triggerEvent(Event event);
 
 		EventContext read;		//读事件
-		EventContext witre;		//写事件
+		EventContext write;		//写事件
 		int fd = 0;				//事件关联的句柄
-		Event m_events = NONE;	//已经注册的事件
+		Event events = NONE;	//已经注册的事件
 		MutexType mutex;
 	};
 public:
 	IOManager(size_t threads = 1, bool use_caller = true, const std::string& name = "");
 	~IOManager();
 	//1 success, 0 retry, -1 error
-	int add Event(int fd, Event event, std::function<void()> cb = nullptr);
+	int addEvent(int fd, Event event, std::function<void()> cb = nullptr);
 	void contextResize(size_t size);
 	bool delEvent(int fd, Event event);
 	bool cancelEvent(int fd, Event event);
@@ -49,8 +51,10 @@ public:
 	static IOManager* GetThis();
 protected:
 	void tickle() override;
-	void stopping() override;
+	bool stopping() override;
 	void idle() override;
+	void onTimerInsetAtFront() override;
+	bool stopping(uint64_t& next_timeout);
 private:
 	int m_epfd = 0;
 	int m_tickleFds[2];

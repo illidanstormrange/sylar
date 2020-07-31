@@ -42,4 +42,17 @@ std::string BacktraceTostring(int size, int skip, const std::string& prefix) {
 	}
 	return ss.str();
 }
+
+
+uint64_t GetCurrentMS() {
+	struct timeval val;
+	gettimeofday(&val, NULL);
+	return val.tv_sec * 1000ul + val.tv_usec / 1000;
+}
+uint64_t GetCurrentUs() {
+	struct timeval val;
+	gettimeofday(&val, NULL);
+	return val.tv_sec * 1000 * 1000ul + val.tv_usec;
+}
+
 }

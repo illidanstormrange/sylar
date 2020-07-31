@@ -7,11 +7,13 @@
 #include <thread>
 #include <semaphore.h>
 #include <stdint.h>
+#include "noncopyable.h"
+
 
 namespace sylar
 {
 
-class Semaphore {
+class Semaphore : Noncopyable {
 public:
 	Semaphore(uint32_t count = 0);
 	~Semaphore();
@@ -20,9 +22,6 @@ public:
 	void notify();
 
 private:
-	Semaphore(const Semaphore&) = delete;
-	Semaphore(const Semaphore&&) = delete;
-	Semaphore operator=(const Semaphore&) = delete;
 private:
 	sem_t m_semaphore;
 };
@@ -32,12 +31,11 @@ struct ScopedLockImpl {
 public:
 	ScopedLockImpl(T& mutex)
 		:m_mutex(mutex){
-			m_mutex.lock();
+			lock();
 			m_locked = true;
 	}
 	~ScopedLockImpl() {
-		m_mutex.unlock();
-		m_locked = false;
+		unlock();
 	}
 
 	void lock() {
@@ -64,12 +62,11 @@ struct WriteScopedLockImpl {
 public:
 	WriteScopedLockImpl(T& mutex)
 		:m_mutex(mutex){
-			m_mutex.wrlock();
+			lock();
 			m_locked = true;
 	}
 	~WriteScopedLockImpl() {
-		m_mutex.unlock();
-		m_locked = false;
+		unlock();
 	}
 
 	void lock() {
@@ -96,12 +93,11 @@ struct ReadScopedLockImpl {
 public:
 	ReadScopedLockImpl(T& mutex)
 		:m_mutex(mutex){
-			m_mutex.rdlock();
+			lock();
 			m_locked = true;
 	}
 	~ReadScopedLockImpl() {
-		m_mutex.unlock();
-		m_locked = false;
+		unlock();
 	}
 
 	void lock() {
@@ -123,7 +119,7 @@ private:
 	bool m_locked;
 };
 
-class NullMutex {
+class NullMutex : Noncopyable {
 public:
 	typedef ScopedLockImpl<NullMutex> Lock;
 	NullMutex() {}
@@ -132,7 +128,7 @@ public:
 	void unlock() {}
 };
 
-class Mutex {
+class Mutex : Noncopyable {
 public:
 	typedef ScopedLockImpl<Mutex> Lock;
 	Mutex() {
@@ -150,7 +146,7 @@ private:
 	pthread_mutex_t m_mutex;
 };
 
-class Spinlock {
+class Spinlock : Noncopyable {
 public:
 	typedef ScopedLockImpl<Spinlock> Lock;
 	Spinlock() {
@@ -170,7 +166,7 @@ private:
 	pthread_spinlock_t m_mutex;
 };
 
-class NullRWMutex {
+class NullRWMutex : Noncopyable {
 public:
 	typedef ReadScopedLockImpl<NullRWMutex> ReadLock;
 	typedef WriteScopedLockImpl<NullRWMutex> WriteLock;
@@ -181,7 +177,7 @@ public:
 	void unlock() {}
 };
 
-class RWMutex {
+class RWMutex : Noncopyable {
 public:
 	typedef ReadScopedLockImpl<RWMutex> ReadLock;
 	typedef WriteScopedLockImpl<RWMutex> WriteLock;

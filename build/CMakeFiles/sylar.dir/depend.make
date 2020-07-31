@@ -4,30 +4,77 @@
 CMakeFiles/sylar.dir/config.cc.o: ../config.cc
 CMakeFiles/sylar.dir/config.cc.o: ../config.h
 CMakeFiles/sylar.dir/config.cc.o: ../log.h
+CMakeFiles/sylar.dir/config.cc.o: ../noncopyable.h
 CMakeFiles/sylar.dir/config.cc.o: ../singleton.h
 CMakeFiles/sylar.dir/config.cc.o: ../thread.h
 CMakeFiles/sylar.dir/config.cc.o: ../util.h
+
+CMakeFiles/sylar.dir/fdmanager.cc.o: .././timer.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../fdmanager.cc
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../fdmanager.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../fiber.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../hook.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../iomanager.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../log.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../macro.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../noncopyable.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../scheduler.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../singleton.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../thread.h
+CMakeFiles/sylar.dir/fdmanager.cc.o: ../util.h
 
 CMakeFiles/sylar.dir/fiber.cc.o: ../config.h
 CMakeFiles/sylar.dir/fiber.cc.o: ../fiber.cc
 CMakeFiles/sylar.dir/fiber.cc.o: ../fiber.h
 CMakeFiles/sylar.dir/fiber.cc.o: ../log.h
 CMakeFiles/sylar.dir/fiber.cc.o: ../macro.h
+CMakeFiles/sylar.dir/fiber.cc.o: ../noncopyable.h
 CMakeFiles/sylar.dir/fiber.cc.o: ../scheduler.h
 CMakeFiles/sylar.dir/fiber.cc.o: ../singleton.h
 CMakeFiles/sylar.dir/fiber.cc.o: ../thread.h
 CMakeFiles/sylar.dir/fiber.cc.o: ../util.h
 
+CMakeFiles/sylar.dir/hook.cc.o: .././timer.h
+CMakeFiles/sylar.dir/hook.cc.o: ../config.h
+CMakeFiles/sylar.dir/hook.cc.o: ../fdmanager.h
+CMakeFiles/sylar.dir/hook.cc.o: ../fiber.h
+CMakeFiles/sylar.dir/hook.cc.o: ../hook.cc
+CMakeFiles/sylar.dir/hook.cc.o: ../hook.h
+CMakeFiles/sylar.dir/hook.cc.o: ../iomanager.h
+CMakeFiles/sylar.dir/hook.cc.o: ../log.h
+CMakeFiles/sylar.dir/hook.cc.o: ../macro.h
+CMakeFiles/sylar.dir/hook.cc.o: ../noncopyable.h
+CMakeFiles/sylar.dir/hook.cc.o: ../scheduler.h
+CMakeFiles/sylar.dir/hook.cc.o: ../singleton.h
+CMakeFiles/sylar.dir/hook.cc.o: ../thread.h
+CMakeFiles/sylar.dir/hook.cc.o: ../util.h
+
+CMakeFiles/sylar.dir/iomanager.cc.o: ../fiber.h
+CMakeFiles/sylar.dir/iomanager.cc.o: ../iomanager.cc
+CMakeFiles/sylar.dir/iomanager.cc.o: ../iomanager.h
+CMakeFiles/sylar.dir/iomanager.cc.o: ../log.h
+CMakeFiles/sylar.dir/iomanager.cc.o: ../macro.h
+CMakeFiles/sylar.dir/iomanager.cc.o: ../noncopyable.h
+CMakeFiles/sylar.dir/iomanager.cc.o: ../scheduler.h
+CMakeFiles/sylar.dir/iomanager.cc.o: ../singleton.h
+CMakeFiles/sylar.dir/iomanager.cc.o: ../thread.h
+CMakeFiles/sylar.dir/iomanager.cc.o: ../timer.h
+CMakeFiles/sylar.dir/iomanager.cc.o: ../util.h
+
 CMakeFiles/sylar.dir/log.cc.o: ../config.h
 CMakeFiles/sylar.dir/log.cc.o: ../log.cc
 CMakeFiles/sylar.dir/log.cc.o: ../log.h
+CMakeFiles/sylar.dir/log.cc.o: ../noncopyable.h
 CMakeFiles/sylar.dir/log.cc.o: ../singleton.h
 CMakeFiles/sylar.dir/log.cc.o: ../thread.h
 CMakeFiles/sylar.dir/log.cc.o: ../util.h
 
+CMakeFiles/sylar.dir/scheduler.cc.o: .././timer.h
 CMakeFiles/sylar.dir/scheduler.cc.o: ../fiber.h
+CMakeFiles/sylar.dir/scheduler.cc.o: ../hook.h
 CMakeFiles/sylar.dir/scheduler.cc.o: ../log.h
 CMakeFiles/sylar.dir/scheduler.cc.o: ../macro.h
+CMakeFiles/sylar.dir/scheduler.cc.o: ../noncopyable.h
 CMakeFiles/sylar.dir/scheduler.cc.o: ../scheduler.cc
 CMakeFiles/sylar.dir/scheduler.cc.o: ../scheduler.h
 CMakeFiles/sylar.dir/scheduler.cc.o: ../singleton.h
@@ -35,13 +82,21 @@ CMakeFiles/sylar.dir/scheduler.cc.o: ../thread.h
 CMakeFiles/sylar.dir/scheduler.cc.o: ../util.h
 
 CMakeFiles/sylar.dir/thread.cc.o: ../log.h
+CMakeFiles/sylar.dir/thread.cc.o: ../noncopyable.h
 CMakeFiles/sylar.dir/thread.cc.o: ../singleton.h
 CMakeFiles/sylar.dir/thread.cc.o: ../thread.cc
 CMakeFiles/sylar.dir/thread.cc.o: ../thread.h
 CMakeFiles/sylar.dir/thread.cc.o: ../util.h
 
+CMakeFiles/sylar.dir/timer.cc.o: ../noncopyable.h
+CMakeFiles/sylar.dir/timer.cc.o: ../thread.h
+CMakeFiles/sylar.dir/timer.cc.o: ../timer.cc
+CMakeFiles/sylar.dir/timer.cc.o: ../timer.h
+CMakeFiles/sylar.dir/timer.cc.o: ../util.h
+
 CMakeFiles/sylar.dir/util.cc.o: ../fiber.h
 CMakeFiles/sylar.dir/util.cc.o: ../log.h
+CMakeFiles/sylar.dir/util.cc.o: ../noncopyable.h
 CMakeFiles/sylar.dir/util.cc.o: ../singleton.h
 CMakeFiles/sylar.dir/util.cc.o: ../thread.h
 CMakeFiles/sylar.dir/util.cc.o: ../util.cc

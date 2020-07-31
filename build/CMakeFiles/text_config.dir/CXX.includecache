@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/illidan/file/cppfile/firstProject/sylar/config.h
+.././config.h
 memory.h
 -
 sstream
@@ -30,11 +30,11 @@ unordered_map
 functional
 -
 log.h
-/home/illidan/file/cppfile/firstProject/sylar/log.h
+.././log.h
 yaml-cpp/yaml.h
 -
 
-/home/illidan/file/cppfile/firstProject/sylar/log.h
+.././log.h
 stdint.h
 -
 string
@@ -60,25 +60,17 @@ time.h
 map
 -
 util.h
-/home/illidan/file/cppfile/firstProject/sylar/util.h
+.././util.h
 singleton.h
-/home/illidan/file/cppfile/firstProject/sylar/singleton.h
+.././singleton.h
 thread.h
-/home/illidan/file/cppfile/firstProject/sylar/thread.h
+.././thread.h
 
-/home/illidan/file/cppfile/firstProject/sylar/singleton.h
+.././noncopyable.h
 
-/home/illidan/file/cppfile/firstProject/sylar/text_config.cc
-config.h
-/home/illidan/file/cppfile/firstProject/sylar/config.h
-log.h
-/home/illidan/file/cppfile/firstProject/sylar/log.h
-yaml-cpp/yaml.h
--
-iostream
--
+.././singleton.h
 
-/home/illidan/file/cppfile/firstProject/sylar/thread.h
+.././thread.h
 memory
 -
 pthread.h
@@ -91,13 +83,17 @@ semaphore.h
 -
 stdint.h
 -
+noncopyable.h
+.././noncopyable.h
 
-/home/illidan/file/cppfile/firstProject/sylar/util.h
+.././util.h
 pthread.h
 -
 sys/types.h
 -
 sys/syscall.h
+-
+sys/time.h
 -
 unistd.h
 -
@@ -110,5 +106,15 @@ iostream
 vector
 -
 string
+-
+
+/home/illidan/file/cppfile/firstProject/sylar/test/text_config.cc
+config.h
+/home/illidan/file/cppfile/firstProject/sylar/test/config.h
+log.h
+/home/illidan/file/cppfile/firstProject/sylar/test/log.h
+yaml-cpp/yaml.h
+-
+iostream
 -
 

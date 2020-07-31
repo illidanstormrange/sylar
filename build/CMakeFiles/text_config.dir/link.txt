@@ -1,1 +1,1 @@
-/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/text_config.dir/text_config.cc.o  -o text_config -Wl,-rpath,/home/illidan/file/cppfile/firstProject/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread 
+/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/text_config.dir/test/text_config.cc.o  -o text_config -Wl,-rpath,/home/illidan/file/cppfile/firstProject/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread -ldl 

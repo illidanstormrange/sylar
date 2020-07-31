@@ -60,38 +60,38 @@ include CMakeFiles/test_thread.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test_thread.dir/flags.make
 
-CMakeFiles/test_thread.dir/test_thread.cc.o: CMakeFiles/test_thread.dir/flags.make
-CMakeFiles/test_thread.dir/test_thread.cc.o: ../test_thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_thread.dir/test_thread.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_thread.dir/test_thread.cc.o -c /home/illidan/file/cppfile/firstProject/sylar/test_thread.cc
+CMakeFiles/test_thread.dir/test/test_thread.cc.o: CMakeFiles/test_thread.dir/flags.make
+CMakeFiles/test_thread.dir/test/test_thread.cc.o: ../test/test_thread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_thread.dir/test/test_thread.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_thread.dir/test/test_thread.cc.o -c /home/illidan/file/cppfile/firstProject/sylar/test/test_thread.cc
 
-CMakeFiles/test_thread.dir/test_thread.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_thread.dir/test_thread.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/illidan/file/cppfile/firstProject/sylar/test_thread.cc > CMakeFiles/test_thread.dir/test_thread.cc.i
+CMakeFiles/test_thread.dir/test/test_thread.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_thread.dir/test/test_thread.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/illidan/file/cppfile/firstProject/sylar/test/test_thread.cc > CMakeFiles/test_thread.dir/test/test_thread.cc.i
 
-CMakeFiles/test_thread.dir/test_thread.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_thread.dir/test_thread.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/illidan/file/cppfile/firstProject/sylar/test_thread.cc -o CMakeFiles/test_thread.dir/test_thread.cc.s
+CMakeFiles/test_thread.dir/test/test_thread.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_thread.dir/test/test_thread.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/illidan/file/cppfile/firstProject/sylar/test/test_thread.cc -o CMakeFiles/test_thread.dir/test/test_thread.cc.s
 
-CMakeFiles/test_thread.dir/test_thread.cc.o.requires:
+CMakeFiles/test_thread.dir/test/test_thread.cc.o.requires:
 
-.PHONY : CMakeFiles/test_thread.dir/test_thread.cc.o.requires
+.PHONY : CMakeFiles/test_thread.dir/test/test_thread.cc.o.requires
 
-CMakeFiles/test_thread.dir/test_thread.cc.o.provides: CMakeFiles/test_thread.dir/test_thread.cc.o.requires
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test_thread.cc.o.provides.build
-.PHONY : CMakeFiles/test_thread.dir/test_thread.cc.o.provides
+CMakeFiles/test_thread.dir/test/test_thread.cc.o.provides: CMakeFiles/test_thread.dir/test/test_thread.cc.o.requires
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cc.o.provides.build
+.PHONY : CMakeFiles/test_thread.dir/test/test_thread.cc.o.provides
 
-CMakeFiles/test_thread.dir/test_thread.cc.o.provides.build: CMakeFiles/test_thread.dir/test_thread.cc.o
+CMakeFiles/test_thread.dir/test/test_thread.cc.o.provides.build: CMakeFiles/test_thread.dir/test/test_thread.cc.o
 
 
 # Object files for target test_thread
 test_thread_OBJECTS = \
-"CMakeFiles/test_thread.dir/test_thread.cc.o"
+"CMakeFiles/test_thread.dir/test/test_thread.cc.o"
 
 # External object files for target test_thread
 test_thread_EXTERNAL_OBJECTS =
 
-test_thread: CMakeFiles/test_thread.dir/test_thread.cc.o
+test_thread: CMakeFiles/test_thread.dir/test/test_thread.cc.o
 test_thread: CMakeFiles/test_thread.dir/build.make
 test_thread: libsylar.so
 test_thread: CMakeFiles/test_thread.dir/link.txt
@@ -103,7 +103,7 @@ CMakeFiles/test_thread.dir/build: test_thread
 
 .PHONY : CMakeFiles/test_thread.dir/build
 
-CMakeFiles/test_thread.dir/requires: CMakeFiles/test_thread.dir/test_thread.cc.o.requires
+CMakeFiles/test_thread.dir/requires: CMakeFiles/test_thread.dir/test/test_thread.cc.o.requires
 
 .PHONY : CMakeFiles/test_thread.dir/requires
 

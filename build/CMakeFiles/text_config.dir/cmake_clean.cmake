@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/text_config.dir/text_config.cc.o"
+  "CMakeFiles/text_config.dir/test/text_config.cc.o"
   "text_config.pdb"
   "text_config"
 )

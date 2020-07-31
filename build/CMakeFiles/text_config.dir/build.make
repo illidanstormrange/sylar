@@ -60,38 +60,38 @@ include CMakeFiles/text_config.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/text_config.dir/flags.make
 
-CMakeFiles/text_config.dir/text_config.cc.o: CMakeFiles/text_config.dir/flags.make
-CMakeFiles/text_config.dir/text_config.cc.o: ../text_config.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/text_config.dir/text_config.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/text_config.dir/text_config.cc.o -c /home/illidan/file/cppfile/firstProject/sylar/text_config.cc
+CMakeFiles/text_config.dir/test/text_config.cc.o: CMakeFiles/text_config.dir/flags.make
+CMakeFiles/text_config.dir/test/text_config.cc.o: ../test/text_config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/text_config.dir/test/text_config.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/text_config.dir/test/text_config.cc.o -c /home/illidan/file/cppfile/firstProject/sylar/test/text_config.cc
 
-CMakeFiles/text_config.dir/text_config.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/text_config.dir/text_config.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/illidan/file/cppfile/firstProject/sylar/text_config.cc > CMakeFiles/text_config.dir/text_config.cc.i
+CMakeFiles/text_config.dir/test/text_config.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/text_config.dir/test/text_config.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/illidan/file/cppfile/firstProject/sylar/test/text_config.cc > CMakeFiles/text_config.dir/test/text_config.cc.i
 
-CMakeFiles/text_config.dir/text_config.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/text_config.dir/text_config.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/illidan/file/cppfile/firstProject/sylar/text_config.cc -o CMakeFiles/text_config.dir/text_config.cc.s
+CMakeFiles/text_config.dir/test/text_config.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/text_config.dir/test/text_config.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/illidan/file/cppfile/firstProject/sylar/test/text_config.cc -o CMakeFiles/text_config.dir/test/text_config.cc.s
 
-CMakeFiles/text_config.dir/text_config.cc.o.requires:
+CMakeFiles/text_config.dir/test/text_config.cc.o.requires:
 
-.PHONY : CMakeFiles/text_config.dir/text_config.cc.o.requires
+.PHONY : CMakeFiles/text_config.dir/test/text_config.cc.o.requires
 
-CMakeFiles/text_config.dir/text_config.cc.o.provides: CMakeFiles/text_config.dir/text_config.cc.o.requires
-	$(MAKE) -f CMakeFiles/text_config.dir/build.make CMakeFiles/text_config.dir/text_config.cc.o.provides.build
-.PHONY : CMakeFiles/text_config.dir/text_config.cc.o.provides
+CMakeFiles/text_config.dir/test/text_config.cc.o.provides: CMakeFiles/text_config.dir/test/text_config.cc.o.requires
+	$(MAKE) -f CMakeFiles/text_config.dir/build.make CMakeFiles/text_config.dir/test/text_config.cc.o.provides.build
+.PHONY : CMakeFiles/text_config.dir/test/text_config.cc.o.provides
 
-CMakeFiles/text_config.dir/text_config.cc.o.provides.build: CMakeFiles/text_config.dir/text_config.cc.o
+CMakeFiles/text_config.dir/test/text_config.cc.o.provides.build: CMakeFiles/text_config.dir/test/text_config.cc.o
 
 
 # Object files for target text_config
 text_config_OBJECTS = \
-"CMakeFiles/text_config.dir/text_config.cc.o"
+"CMakeFiles/text_config.dir/test/text_config.cc.o"
 
 # External object files for target text_config
 text_config_EXTERNAL_OBJECTS =
 
-text_config: CMakeFiles/text_config.dir/text_config.cc.o
+text_config: CMakeFiles/text_config.dir/test/text_config.cc.o
 text_config: CMakeFiles/text_config.dir/build.make
 text_config: libsylar.so
 text_config: CMakeFiles/text_config.dir/link.txt
@@ -103,7 +103,7 @@ CMakeFiles/text_config.dir/build: text_config
 
 .PHONY : CMakeFiles/text_config.dir/build
 
-CMakeFiles/text_config.dir/requires: CMakeFiles/text_config.dir/text_config.cc.o.requires
+CMakeFiles/text_config.dir/requires: CMakeFiles/text_config.dir/test/text_config.cc.o.requires
 
 .PHONY : CMakeFiles/text_config.dir/requires
 

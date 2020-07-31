@@ -5,6 +5,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/sylar.dir/thread.cc.o"
   "CMakeFiles/sylar.dir/scheduler.cc.o"
   "CMakeFiles/sylar.dir/fiber.cc.o"
+  "CMakeFiles/sylar.dir/iomanager.cc.o"
+  "CMakeFiles/sylar.dir/fdmanager.cc.o"
+  "CMakeFiles/sylar.dir/timer.cc.o"
+  "CMakeFiles/sylar.dir/hook.cc.o"
   "libsylar.pdb"
   "libsylar.so"
 )

@@ -1,0 +1,1 @@
+/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/test_iomanager.dir/test/test_iomanager.cc.o  -o test_iomanager -Wl,-rpath,/home/illidan/file/cppfile/firstProject/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread -ldl 

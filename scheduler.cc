@@ -1,4 +1,5 @@
 #include "scheduler.h"
+#include "hook.h"
 #include <iostream>
 #include "log.h"
 
@@ -132,6 +133,7 @@ void Scheduler::stop() {
 
 void Scheduler::run() {
 	SYLAR_LOG_INFO(g_logger_s) << m_name << "run start";
+	set_hook_enable(true);
 	setThis();
 	if(sylar::GetThreadId() != m_rootThread) {
 		t_fiber = Fiber::GetThis().get();

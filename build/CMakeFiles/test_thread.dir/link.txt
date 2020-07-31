@@ -1,1 +1,1 @@
-/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/test_thread.dir/test_thread.cc.o  -o test_thread -Wl,-rpath,/home/illidan/file/cppfile/firstProject/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread 
+/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/test_thread.dir/test/test_thread.cc.o  -o test_thread -Wl,-rpath,/home/illidan/file/cppfile/firstProject/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread -ldl 
