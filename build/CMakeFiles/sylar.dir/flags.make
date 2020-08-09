@@ -6,5 +6,5 @@ CXX_FLAGS =  -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated -fPIC
 
 CXX_DEFINES = -Dsylar_EXPORTS
 
-CXX_INCLUDES = -I/home/illidan/file/cppfile/firstProject/sylar/. 
+CXX_INCLUDES = -I/home/illidan/file/cppfile/firstProject/new/sylar/. 
 

@@ -1,4 +1,4 @@
-#include "sylar.h"
+#include "../sylar.h"
 #include <assert.h>
 
 

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/sylar.dir/socket.cc.o"
+  "CMakeFiles/sylar.dir/address.cc.o"
   "CMakeFiles/sylar.dir/log.cc.o"
   "CMakeFiles/sylar.dir/util.cc.o"
   "CMakeFiles/sylar.dir/config.cc.o"
@@ -9,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sylar.dir/fdmanager.cc.o"
   "CMakeFiles/sylar.dir/timer.cc.o"
   "CMakeFiles/sylar.dir/hook.cc.o"
+  "CMakeFiles/sylar.dir/bytearry.cc.o"
   "libsylar.pdb"
   "libsylar.so"
 )

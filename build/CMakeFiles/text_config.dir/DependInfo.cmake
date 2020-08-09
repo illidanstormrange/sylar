@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/illidan/file/cppfile/firstProject/sylar/test/text_config.cc" "/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles/text_config.dir/test/text_config.cc.o"
+  "/home/illidan/file/cppfile/firstProject/new/sylar/test/text_config.cc" "/home/illidan/file/cppfile/firstProject/new/sylar/build/CMakeFiles/text_config.dir/test/text_config.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/illidan/file/cppfile/firstProject/sylar/build/CMakeFiles/sylar.dir/DependInfo.cmake"
+  "/home/illidan/file/cppfile/firstProject/new/sylar/build/CMakeFiles/sylar.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

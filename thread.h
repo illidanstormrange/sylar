@@ -54,7 +54,7 @@ public:
 
 private:
 	T& m_mutex;
-	bool m_locked;
+	bool m_locked = false;;
 };
 
 template<class T>
@@ -85,7 +85,7 @@ public:
 
 private:
 	T& m_mutex;
-	bool m_locked;
+	bool m_locked = false;
 };
 
 template<class T>
@@ -116,7 +116,7 @@ public:
 
 private:
 	T& m_mutex;
-	bool m_locked;
+	bool m_locked = false;
 };
 
 class NullMutex : Noncopyable {

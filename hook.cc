@@ -7,6 +7,7 @@
 #include "fdmanager.h"
 #include "fiber.h"
 #include "config.h"
+#include "macro.h"
 
 sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 namespace sylar {
@@ -89,7 +90,6 @@ static ssize_t do_io(int fd, OriginFun fun, const char* hook_fun_name,
 		return fun(fd, std::forward<Args>(args)...);
 	}
 
-	SYLAR_LOG_INFO(g_logger) << "do_io<" << hook_fun_name << ">";
 
 	sylar::FdCtx::ptr ctx = sylar::FdMgr::GetInstence()->get(fd);
 	if(!ctx) {

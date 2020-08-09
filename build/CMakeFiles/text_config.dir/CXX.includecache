@@ -108,11 +108,11 @@ vector
 string
 -
 
-/home/illidan/file/cppfile/firstProject/sylar/test/text_config.cc
+/home/illidan/file/cppfile/firstProject/new/sylar/test/text_config.cc
 config.h
-/home/illidan/file/cppfile/firstProject/sylar/test/config.h
+/home/illidan/file/cppfile/firstProject/new/sylar/test/config.h
 log.h
-/home/illidan/file/cppfile/firstProject/sylar/test/log.h
+/home/illidan/file/cppfile/firstProject/new/sylar/test/log.h
 yaml-cpp/yaml.h
 -
 iostream

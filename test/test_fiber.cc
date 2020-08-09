@@ -1,10 +1,9 @@
-#include "sylar.h"
+#include "../sylar.h"
 
 sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
 
 void test() {
 	SYLAR_LOG_INFO(g_logger) << "test begin";
-	sleep(1);
 	sylar::Fiber::YieldToHold();
 	SYLAR_LOG_INFO(g_logger) << "test end";
 }
