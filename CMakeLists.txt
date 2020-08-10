@@ -12,6 +12,7 @@ find_library(YAMLCPP yaml-cpp)
 
 set(LIB_SRC
 	socket.cc
+	hook.cc
 	address.cc
 	log.cc
 	util.cc
@@ -22,8 +23,12 @@ set(LIB_SRC
 	iomanager.cc
 	fdmanager.cc
 	timer.cc
-	hook.cc
 	bytearry.cc
+	tcp_server.cc
+	http/http.cc
+	http/http_parser.cc
+	http/http11_parser.cc
+	http/httpclient_parser.cc
 	)
 add_library(sylar SHARED ${LIB_SRC})
 
@@ -73,3 +78,11 @@ target_link_libraries(test_socket sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
 add_executable(test_bytearray test/test_bytearray.cc)
 add_dependencies(test_bytearray sylar)
 target_link_libraries(test_bytearray sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
+
+add_executable(test_http test/test_http.cc)
+add_dependencies(test_http sylar)
+target_link_libraries(test_http sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
+
+add_executable(test_http_parser test/test_http_parser.cc)
+add_dependencies(test_http_parser sylar)
+target_link_libraries(test_http_parser sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)

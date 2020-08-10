@@ -1,6 +1,6 @@
 #include "bytearry.h"
 #include "log.h"
-#include "endian.h"
+#include "my_endian.h"
 #include <fstream>
 #include <sstream>
 #include <string>

@@ -3,8 +3,8 @@
 
 CMakeFiles/sylar.dir/address.cc.o: ../address.cc
 CMakeFiles/sylar.dir/address.cc.o: ../address.h
-CMakeFiles/sylar.dir/address.cc.o: ../endian.h
 CMakeFiles/sylar.dir/address.cc.o: ../log.h
+CMakeFiles/sylar.dir/address.cc.o: ../my_endian.h
 CMakeFiles/sylar.dir/address.cc.o: ../noncopyable.h
 CMakeFiles/sylar.dir/address.cc.o: ../singleton.h
 CMakeFiles/sylar.dir/address.cc.o: ../thread.h
@@ -12,8 +12,8 @@ CMakeFiles/sylar.dir/address.cc.o: ../util.h
 
 CMakeFiles/sylar.dir/bytearry.cc.o: ../bytearry.cc
 CMakeFiles/sylar.dir/bytearry.cc.o: ../bytearry.h
-CMakeFiles/sylar.dir/bytearry.cc.o: ../endian.h
 CMakeFiles/sylar.dir/bytearry.cc.o: ../log.h
+CMakeFiles/sylar.dir/bytearry.cc.o: ../my_endian.h
 CMakeFiles/sylar.dir/bytearry.cc.o: ../noncopyable.h
 CMakeFiles/sylar.dir/bytearry.cc.o: ../singleton.h
 CMakeFiles/sylar.dir/bytearry.cc.o: ../thread.h
@@ -67,6 +67,33 @@ CMakeFiles/sylar.dir/hook.cc.o: ../singleton.h
 CMakeFiles/sylar.dir/hook.cc.o: ../thread.h
 CMakeFiles/sylar.dir/hook.cc.o: ../util.h
 
+CMakeFiles/sylar.dir/http/http.cc.o: ../http/http.cc
+CMakeFiles/sylar.dir/http/http.cc.o: ../http/http.h
+CMakeFiles/sylar.dir/http/http.cc.o: ../http/http11_common.h
+CMakeFiles/sylar.dir/http/http.cc.o: ../http/http11_parser.h
+CMakeFiles/sylar.dir/http/http.cc.o: ../http/httpclient_parser.h
+
+CMakeFiles/sylar.dir/http/http11_parser.cc.o: ../http/http11_common.h
+CMakeFiles/sylar.dir/http/http11_parser.cc.o: ../http/http11_parser.cc
+CMakeFiles/sylar.dir/http/http11_parser.cc.o: ../http/http11_parser.h
+
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../config.h
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../http/http.h
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../http/http11_common.h
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../http/http11_parser.h
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../http/http_parser.cc
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../http/http_parser.h
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../http/httpclient_parser.h
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../log.h
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../noncopyable.h
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../singleton.h
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../thread.h
+CMakeFiles/sylar.dir/http/http_parser.cc.o: ../util.h
+
+CMakeFiles/sylar.dir/http/httpclient_parser.cc.o: ../http/http11_common.h
+CMakeFiles/sylar.dir/http/httpclient_parser.cc.o: ../http/httpclient_parser.cc
+CMakeFiles/sylar.dir/http/httpclient_parser.cc.o: ../http/httpclient_parser.h
+
 CMakeFiles/sylar.dir/iomanager.cc.o: ../fiber.h
 CMakeFiles/sylar.dir/iomanager.cc.o: ../iomanager.cc
 CMakeFiles/sylar.dir/iomanager.cc.o: ../iomanager.h
@@ -114,6 +141,22 @@ CMakeFiles/sylar.dir/socket.cc.o: ../socket.h
 CMakeFiles/sylar.dir/socket.cc.o: ../thread.h
 CMakeFiles/sylar.dir/socket.cc.o: ../timer.h
 CMakeFiles/sylar.dir/socket.cc.o: ../util.h
+
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../address.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../config.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../fiber.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../iomanager.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../log.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../macro.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../noncopyable.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../scheduler.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../singleton.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../socket.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../tcp_server.cc
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../tcp_server.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../thread.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../timer.h
+CMakeFiles/sylar.dir/tcp_server.cc.o: ../util.h
 
 CMakeFiles/sylar.dir/thread.cc.o: ../log.h
 CMakeFiles/sylar.dir/thread.cc.o: ../noncopyable.h

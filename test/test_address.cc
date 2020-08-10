@@ -45,7 +45,7 @@ void test_ipv4() {
 int main()
 {
 	test_address();
-	//test_iface();
-	//test_ipv4();
+	test_iface();
+	test_ipv4();
 	return 0;
 }
