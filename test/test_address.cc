@@ -7,22 +7,21 @@ void test_address()
 	std::vector<sylar::Address::ptr> addrs;
 
 	SYLAR_LOG_INFO(g_logger) << "begin";
-	bool v = sylar::Address::LookUp(addrs, "www.baidu.com");
+	bool v = sylar::Address::LookUp(addrs, "127.0.0.1:8011");
 	SYLAR_LOG_INFO(g_logger) << "end";
 	if(!v) {
 		SYLAR_LOG_ERROR(g_logger) << "LookUp fail";
 		return;
 	}
 
-	for(size_t i = 0; i < addrs.size(); ++i) {
-		SYLAR_LOG_INFO(g_logger) << i << " - " << addrs[i]->toString();
+	for(auto& i : addrs) {
+		SYLAR_LOG_INFO(g_logger) << " - " << i->toString();
 	}
 }
 
 void test_iface()
 {
 	std::multimap<std::string, std::pair<sylar::Address::ptr, uint32_t> > results;
-
 	bool v = sylar::Address::GetInterfaceAddress(results);
 	if(!v) {
 		SYLAR_LOG_ERROR(g_logger) << "GetInterfaceAddress fail";
@@ -45,7 +44,7 @@ void test_ipv4() {
 int main()
 {
 	test_address();
-	test_iface();
-	test_ipv4();
+	//test_iface();
+	//test_ipv4();
 	return 0;
 }

@@ -4,6 +4,8 @@
 #include <sstream>
 #include <stddef.h>
 #include <netdb.h>
+#include <sys/types.h>
+#include <sys/socket.h>
 #include <ifaddrs.h>
 
 static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
@@ -32,6 +34,10 @@ std::string Address::toString() const {
 	std::stringstream ss;
 	insert(ss);
 	return ss.str();
+}
+
+std::ostream& operator<<(std::ostream& os, const Address& addr) {
+	return addr.insert(os);;
 }
 
 Address::ptr Address::LookUpAny(const std::string& host,

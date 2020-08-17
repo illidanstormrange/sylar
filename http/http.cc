@@ -195,7 +195,7 @@ void HttpResponse::delHeader(const std::string& key) {
 }
 
 std::ostream& HttpResponse::dump(std::ostream& os) const {
-	os << "HTTP/ "
+	os << "HTTP/"
 	   << ((uint32_t)(m_version >> 4))
 	   << "."
 	   << ((uint32_t)(m_version & 0x0F))
@@ -212,7 +212,8 @@ std::ostream& HttpResponse::dump(std::ostream& os) const {
 	}
 	os << "connection: " << (m_close ? "close" : "keep-alive") << "\r\n";
 	if(!m_body.empty()) {
-		os << "content-length: " << m_body.size() << "\r\n\r\n";
+		os << "content-length: " << m_body.size() << "\r\n\r\n" 
+		   << m_body;
 	} else {
 		os << "\r\n";
 	}
@@ -220,6 +221,13 @@ std::ostream& HttpResponse::dump(std::ostream& os) const {
 
 }
 
+std::ostream& operator<<(std::ostream& os, const HttpRequest& req) {
+	return req.dump(os);
+}
+
+std::ostream& operator<<(std::ostream& os, const HttpResponse& rsp) {
+	return rsp.dump(os);
+}
 std::string HttpResponse::toString() const {
 	std::stringstream ss;
 	dump(ss);

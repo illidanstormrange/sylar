@@ -114,134 +114,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_http_parser
+# Target rules for targets named test_uri
 
 # Build rule for target.
-test_http_parser: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_http_parser
-.PHONY : test_http_parser
+test_uri: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_uri
+.PHONY : test_uri
 
 # fast build rule for target.
-test_http_parser/fast:
-	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/build
-.PHONY : test_http_parser/fast
+test_uri/fast:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/build
+.PHONY : test_uri/fast
 
 #=============================================================================
-# Target rules for targets named test_http
+# Target rules for targets named test_http_connection
 
 # Build rule for target.
-test_http: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_http
-.PHONY : test_http
+test_http_connection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_connection
+.PHONY : test_http_connection
 
 # fast build rule for target.
-test_http/fast:
-	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
-.PHONY : test_http/fast
+test_http_connection/fast:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/build
+.PHONY : test_http_connection/fast
 
 #=============================================================================
-# Target rules for targets named test_address
+# Target rules for targets named test_scheduler
 
 # Build rule for target.
-test_address: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_address
-.PHONY : test_address
+test_scheduler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
+.PHONY : test_scheduler
 
 # fast build rule for target.
-test_address/fast:
-	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
-.PHONY : test_address/fast
-
-#=============================================================================
-# Target rules for targets named test_hook
-
-# Build rule for target.
-test_hook: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_hook
-.PHONY : test_hook
-
-# fast build rule for target.
-test_hook/fast:
-	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
-.PHONY : test_hook/fast
-
-#=============================================================================
-# Target rules for targets named test_iomanager
-
-# Build rule for target.
-test_iomanager: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
-.PHONY : test_iomanager
-
-# fast build rule for target.
-test_iomanager/fast:
-	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
-.PHONY : test_iomanager/fast
-
-#=============================================================================
-# Target rules for targets named text_config
-
-# Build rule for target.
-text_config: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 text_config
-.PHONY : text_config
-
-# fast build rule for target.
-text_config/fast:
-	$(MAKE) -f CMakeFiles/text_config.dir/build.make CMakeFiles/text_config.dir/build
-.PHONY : text_config/fast
-
-#=============================================================================
-# Target rules for targets named sylar
-
-# Build rule for target.
-sylar: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sylar
-.PHONY : sylar
-
-# fast build rule for target.
-sylar/fast:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/build
-.PHONY : sylar/fast
-
-#=============================================================================
-# Target rules for targets named test_bytearray
-
-# Build rule for target.
-test_bytearray: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_bytearray
-.PHONY : test_bytearray
-
-# fast build rule for target.
-test_bytearray/fast:
-	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
-.PHONY : test_bytearray/fast
-
-#=============================================================================
-# Target rules for targets named test_thread
-
-# Build rule for target.
-test_thread: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_thread
-.PHONY : test_thread
-
-# fast build rule for target.
-test_thread/fast:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-.PHONY : test_thread/fast
-
-#=============================================================================
-# Target rules for targets named test_util
-
-# Build rule for target.
-test_util: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_util
-.PHONY : test_util
-
-# fast build rule for target.
-test_util/fast:
-	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-.PHONY : test_util/fast
+test_scheduler/fast:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
+.PHONY : test_scheduler/fast
 
 #=============================================================================
 # Target rules for targets named test_socket
@@ -257,6 +166,45 @@ test_socket/fast:
 .PHONY : test_socket/fast
 
 #=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
+
+#=============================================================================
+# Target rules for targets named test_thread
+
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
+
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
+#=============================================================================
+# Target rules for targets named test_bytearray
+
+# Build rule for target.
+test_bytearray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_bytearray
+.PHONY : test_bytearray
+
+# fast build rule for target.
+test_bytearray/fast:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
+.PHONY : test_bytearray/fast
+
+#=============================================================================
 # Target rules for targets named test_fiber
 
 # Build rule for target.
@@ -270,17 +218,134 @@ test_fiber/fast:
 .PHONY : test_fiber/fast
 
 #=============================================================================
-# Target rules for targets named test_scheduler
+# Target rules for targets named sylar
 
 # Build rule for target.
-test_scheduler: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
-.PHONY : test_scheduler
+sylar: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sylar
+.PHONY : sylar
 
 # fast build rule for target.
-test_scheduler/fast:
-	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
-.PHONY : test_scheduler/fast
+sylar/fast:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/build
+.PHONY : sylar/fast
+
+#=============================================================================
+# Target rules for targets named text_config
+
+# Build rule for target.
+text_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 text_config
+.PHONY : text_config
+
+# fast build rule for target.
+text_config/fast:
+	$(MAKE) -f CMakeFiles/text_config.dir/build.make CMakeFiles/text_config.dir/build
+.PHONY : text_config/fast
+
+#=============================================================================
+# Target rules for targets named test_iomanager
+
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
+
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
+
+#=============================================================================
+# Target rules for targets named test_hook
+
+# Build rule for target.
+test_hook: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
+
+# fast build rule for target.
+test_hook/fast:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
+
+#=============================================================================
+# Target rules for targets named test_address
+
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
+
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
+
+#=============================================================================
+# Target rules for targets named test_tcp_server
+
+# Build rule for target.
+test_tcp_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_tcp_server
+.PHONY : test_tcp_server
+
+# fast build rule for target.
+test_tcp_server/fast:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/build
+.PHONY : test_tcp_server/fast
+
+#=============================================================================
+# Target rules for targets named test_http
+
+# Build rule for target.
+test_http: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http
+.PHONY : test_http
+
+# fast build rule for target.
+test_http/fast:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
+.PHONY : test_http/fast
+
+#=============================================================================
+# Target rules for targets named test_http_parser
+
+# Build rule for target.
+test_http_parser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_parser
+.PHONY : test_http_parser
+
+# fast build rule for target.
+test_http_parser/fast:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/build
+.PHONY : test_http_parser/fast
+
+#=============================================================================
+# Target rules for targets named echo_server
+
+# Build rule for target.
+echo_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_server
+.PHONY : echo_server
+
+# fast build rule for target.
+echo_server/fast:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/build
+.PHONY : echo_server/fast
+
+#=============================================================================
+# Target rules for targets named test_http_server
+
+# Build rule for target.
+test_http_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_server
+.PHONY : test_http_server
+
+# fast build rule for target.
+test_http_server/fast:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/build
+.PHONY : test_http_server/fast
 
 address.o: address.cc.o
 
@@ -362,6 +427,33 @@ config.s: config.cc.s
 config.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/config.cc.s
 .PHONY : config.cc.s
+
+examples/echo_server.o: examples/echo_server.cc.o
+
+.PHONY : examples/echo_server.o
+
+# target to build an object file
+examples/echo_server.cc.o:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.o
+.PHONY : examples/echo_server.cc.o
+
+examples/echo_server.i: examples/echo_server.cc.i
+
+.PHONY : examples/echo_server.i
+
+# target to preprocess a source file
+examples/echo_server.cc.i:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.i
+.PHONY : examples/echo_server.cc.i
+
+examples/echo_server.s: examples/echo_server.cc.s
+
+.PHONY : examples/echo_server.s
+
+# target to generate assembly for a file
+examples/echo_server.cc.s:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.s
+.PHONY : examples/echo_server.cc.s
 
 fdmanager.o: fdmanager.cc.o
 
@@ -498,6 +590,33 @@ http/http11_parser.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http11_parser.cc.s
 .PHONY : http/http11_parser.cc.s
 
+http/http_connection.o: http/http_connection.cc.o
+
+.PHONY : http/http_connection.o
+
+# target to build an object file
+http/http_connection.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http_connection.cc.o
+.PHONY : http/http_connection.cc.o
+
+http/http_connection.i: http/http_connection.cc.i
+
+.PHONY : http/http_connection.i
+
+# target to preprocess a source file
+http/http_connection.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http_connection.cc.i
+.PHONY : http/http_connection.cc.i
+
+http/http_connection.s: http/http_connection.cc.s
+
+.PHONY : http/http_connection.s
+
+# target to generate assembly for a file
+http/http_connection.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http_connection.cc.s
+.PHONY : http/http_connection.cc.s
+
 http/http_parser.o: http/http_parser.cc.o
 
 .PHONY : http/http_parser.o
@@ -525,6 +644,60 @@ http/http_parser.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http_parser.cc.s
 .PHONY : http/http_parser.cc.s
 
+http/http_server.o: http/http_server.cc.o
+
+.PHONY : http/http_server.o
+
+# target to build an object file
+http/http_server.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http_server.cc.o
+.PHONY : http/http_server.cc.o
+
+http/http_server.i: http/http_server.cc.i
+
+.PHONY : http/http_server.i
+
+# target to preprocess a source file
+http/http_server.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http_server.cc.i
+.PHONY : http/http_server.cc.i
+
+http/http_server.s: http/http_server.cc.s
+
+.PHONY : http/http_server.s
+
+# target to generate assembly for a file
+http/http_server.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http_server.cc.s
+.PHONY : http/http_server.cc.s
+
+http/http_session.o: http/http_session.cc.o
+
+.PHONY : http/http_session.o
+
+# target to build an object file
+http/http_session.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http_session.cc.o
+.PHONY : http/http_session.cc.o
+
+http/http_session.i: http/http_session.cc.i
+
+.PHONY : http/http_session.i
+
+# target to preprocess a source file
+http/http_session.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http_session.cc.i
+.PHONY : http/http_session.cc.i
+
+http/http_session.s: http/http_session.cc.s
+
+.PHONY : http/http_session.s
+
+# target to generate assembly for a file
+http/http_session.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/http_session.cc.s
+.PHONY : http/http_session.cc.s
+
 http/httpclient_parser.o: http/httpclient_parser.cc.o
 
 .PHONY : http/httpclient_parser.o
@@ -551,6 +724,33 @@ http/httpclient_parser.s: http/httpclient_parser.cc.s
 http/httpclient_parser.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/httpclient_parser.cc.s
 .PHONY : http/httpclient_parser.cc.s
+
+http/servlet.o: http/servlet.cc.o
+
+.PHONY : http/servlet.o
+
+# target to build an object file
+http/servlet.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/servlet.cc.o
+.PHONY : http/servlet.cc.o
+
+http/servlet.i: http/servlet.cc.i
+
+.PHONY : http/servlet.i
+
+# target to preprocess a source file
+http/servlet.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/servlet.cc.i
+.PHONY : http/servlet.cc.i
+
+http/servlet.s: http/servlet.cc.s
+
+.PHONY : http/servlet.s
+
+# target to generate assembly for a file
+http/servlet.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/servlet.cc.s
+.PHONY : http/servlet.cc.s
 
 iomanager.o: iomanager.cc.o
 
@@ -660,6 +860,60 @@ socket.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/socket.cc.s
 .PHONY : socket.cc.s
 
+socket_stream.o: socket_stream.cc.o
+
+.PHONY : socket_stream.o
+
+# target to build an object file
+socket_stream.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/socket_stream.cc.o
+.PHONY : socket_stream.cc.o
+
+socket_stream.i: socket_stream.cc.i
+
+.PHONY : socket_stream.i
+
+# target to preprocess a source file
+socket_stream.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/socket_stream.cc.i
+.PHONY : socket_stream.cc.i
+
+socket_stream.s: socket_stream.cc.s
+
+.PHONY : socket_stream.s
+
+# target to generate assembly for a file
+socket_stream.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/socket_stream.cc.s
+.PHONY : socket_stream.cc.s
+
+stream.o: stream.cc.o
+
+.PHONY : stream.o
+
+# target to build an object file
+stream.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/stream.cc.o
+.PHONY : stream.cc.o
+
+stream.i: stream.cc.i
+
+.PHONY : stream.i
+
+# target to preprocess a source file
+stream.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/stream.cc.i
+.PHONY : stream.cc.i
+
+stream.s: stream.cc.s
+
+.PHONY : stream.s
+
+# target to generate assembly for a file
+stream.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/stream.cc.s
+.PHONY : stream.cc.s
+
 tcp_server.o: tcp_server.cc.o
 
 .PHONY : tcp_server.o
@@ -686,6 +940,33 @@ tcp_server.s: tcp_server.cc.s
 tcp_server.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/tcp_server.cc.s
 .PHONY : tcp_server.cc.s
+
+test/tese_connection.o: test/tese_connection.cc.o
+
+.PHONY : test/tese_connection.o
+
+# target to build an object file
+test/tese_connection.cc.o:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o
+.PHONY : test/tese_connection.cc.o
+
+test/tese_connection.i: test/tese_connection.cc.i
+
+.PHONY : test/tese_connection.i
+
+# target to preprocess a source file
+test/tese_connection.cc.i:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/test/tese_connection.cc.i
+.PHONY : test/tese_connection.cc.i
+
+test/tese_connection.s: test/tese_connection.cc.s
+
+.PHONY : test/tese_connection.s
+
+# target to generate assembly for a file
+test/tese_connection.cc.s:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/test/tese_connection.cc.s
+.PHONY : test/tese_connection.cc.s
 
 test/test_address.o: test/test_address.cc.o
 
@@ -849,6 +1130,33 @@ test/test_http_parser.cc.s:
 	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/test/test_http_parser.cc.s
 .PHONY : test/test_http_parser.cc.s
 
+test/test_http_sever.o: test/test_http_sever.cc.o
+
+.PHONY : test/test_http_sever.o
+
+# target to build an object file
+test/test_http_sever.cc.o:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o
+.PHONY : test/test_http_sever.cc.o
+
+test/test_http_sever.i: test/test_http_sever.cc.i
+
+.PHONY : test/test_http_sever.i
+
+# target to preprocess a source file
+test/test_http_sever.cc.i:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/test/test_http_sever.cc.i
+.PHONY : test/test_http_sever.cc.i
+
+test/test_http_sever.s: test/test_http_sever.cc.s
+
+.PHONY : test/test_http_sever.s
+
+# target to generate assembly for a file
+test/test_http_sever.cc.s:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/test/test_http_sever.cc.s
+.PHONY : test/test_http_sever.cc.s
+
 test/test_iomanager.o: test/test_iomanager.cc.o
 
 .PHONY : test/test_iomanager.o
@@ -930,6 +1238,33 @@ test/test_socket.cc.s:
 	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/test/test_socket.cc.s
 .PHONY : test/test_socket.cc.s
 
+test/test_tcp_server.o: test/test_tcp_server.cc.o
+
+.PHONY : test/test_tcp_server.o
+
+# target to build an object file
+test/test_tcp_server.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/test/test_tcp_server.cc.o
+.PHONY : test/test_tcp_server.cc.o
+
+test/test_tcp_server.i: test/test_tcp_server.cc.i
+
+.PHONY : test/test_tcp_server.i
+
+# target to preprocess a source file
+test/test_tcp_server.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/test/test_tcp_server.cc.i
+.PHONY : test/test_tcp_server.cc.i
+
+test/test_tcp_server.s: test/test_tcp_server.cc.s
+
+.PHONY : test/test_tcp_server.s
+
+# target to generate assembly for a file
+test/test_tcp_server.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/test/test_tcp_server.cc.s
+.PHONY : test/test_tcp_server.cc.s
+
 test/test_thread.o: test/test_thread.cc.o
 
 .PHONY : test/test_thread.o
@@ -956,6 +1291,33 @@ test/test_thread.s: test/test_thread.cc.s
 test/test_thread.cc.s:
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cc.s
 .PHONY : test/test_thread.cc.s
+
+test/test_uri.o: test/test_uri.cc.o
+
+.PHONY : test/test_uri.o
+
+# target to build an object file
+test/test_uri.cc.o:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/test/test_uri.cc.o
+.PHONY : test/test_uri.cc.o
+
+test/test_uri.i: test/test_uri.cc.i
+
+.PHONY : test/test_uri.i
+
+# target to preprocess a source file
+test/test_uri.cc.i:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/test/test_uri.cc.i
+.PHONY : test/test_uri.cc.i
+
+test/test_uri.s: test/test_uri.cc.s
+
+.PHONY : test/test_uri.s
+
+# target to generate assembly for a file
+test/test_uri.cc.s:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/test/test_uri.cc.s
+.PHONY : test/test_uri.cc.s
 
 test/test_util.o: test/test_util.cc.o
 
@@ -1065,6 +1427,33 @@ timer.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/timer.cc.s
 .PHONY : timer.cc.s
 
+uri.o: uri.cc.o
+
+.PHONY : uri.o
+
+# target to build an object file
+uri.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/uri.cc.o
+.PHONY : uri.cc.o
+
+uri.i: uri.cc.i
+
+.PHONY : uri.i
+
+# target to preprocess a source file
+uri.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/uri.cc.i
+.PHONY : uri.cc.i
+
+uri.s: uri.cc.s
+
+.PHONY : uri.s
+
+# target to generate assembly for a file
+uri.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/uri.cc.s
+.PHONY : uri.cc.s
+
 util.o: util.cc.o
 
 .PHONY : util.o
@@ -1099,20 +1488,25 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... test_http_parser"
-	@echo "... test_http"
-	@echo "... edit_cache"
-	@echo "... test_address"
-	@echo "... test_hook"
-	@echo "... test_iomanager"
-	@echo "... text_config"
-	@echo "... sylar"
-	@echo "... test_bytearray"
-	@echo "... test_thread"
-	@echo "... test_util"
-	@echo "... test_socket"
-	@echo "... test_fiber"
+	@echo "... test_uri"
+	@echo "... test_http_connection"
 	@echo "... test_scheduler"
+	@echo "... test_socket"
+	@echo "... edit_cache"
+	@echo "... test_util"
+	@echo "... test_thread"
+	@echo "... test_bytearray"
+	@echo "... test_fiber"
+	@echo "... sylar"
+	@echo "... text_config"
+	@echo "... test_iomanager"
+	@echo "... test_hook"
+	@echo "... test_address"
+	@echo "... test_tcp_server"
+	@echo "... test_http"
+	@echo "... test_http_parser"
+	@echo "... echo_server"
+	@echo "... test_http_server"
 	@echo "... address.o"
 	@echo "... address.i"
 	@echo "... address.s"
@@ -1122,6 +1516,9 @@ help:
 	@echo "... config.o"
 	@echo "... config.i"
 	@echo "... config.s"
+	@echo "... examples/echo_server.o"
+	@echo "... examples/echo_server.i"
+	@echo "... examples/echo_server.s"
 	@echo "... fdmanager.o"
 	@echo "... fdmanager.i"
 	@echo "... fdmanager.s"
@@ -1137,12 +1534,24 @@ help:
 	@echo "... http/http11_parser.o"
 	@echo "... http/http11_parser.i"
 	@echo "... http/http11_parser.s"
+	@echo "... http/http_connection.o"
+	@echo "... http/http_connection.i"
+	@echo "... http/http_connection.s"
 	@echo "... http/http_parser.o"
 	@echo "... http/http_parser.i"
 	@echo "... http/http_parser.s"
+	@echo "... http/http_server.o"
+	@echo "... http/http_server.i"
+	@echo "... http/http_server.s"
+	@echo "... http/http_session.o"
+	@echo "... http/http_session.i"
+	@echo "... http/http_session.s"
 	@echo "... http/httpclient_parser.o"
 	@echo "... http/httpclient_parser.i"
 	@echo "... http/httpclient_parser.s"
+	@echo "... http/servlet.o"
+	@echo "... http/servlet.i"
+	@echo "... http/servlet.s"
 	@echo "... iomanager.o"
 	@echo "... iomanager.i"
 	@echo "... iomanager.s"
@@ -1155,9 +1564,18 @@ help:
 	@echo "... socket.o"
 	@echo "... socket.i"
 	@echo "... socket.s"
+	@echo "... socket_stream.o"
+	@echo "... socket_stream.i"
+	@echo "... socket_stream.s"
+	@echo "... stream.o"
+	@echo "... stream.i"
+	@echo "... stream.s"
 	@echo "... tcp_server.o"
 	@echo "... tcp_server.i"
 	@echo "... tcp_server.s"
+	@echo "... test/tese_connection.o"
+	@echo "... test/tese_connection.i"
+	@echo "... test/tese_connection.s"
 	@echo "... test/test_address.o"
 	@echo "... test/test_address.i"
 	@echo "... test/test_address.s"
@@ -1176,6 +1594,9 @@ help:
 	@echo "... test/test_http_parser.o"
 	@echo "... test/test_http_parser.i"
 	@echo "... test/test_http_parser.s"
+	@echo "... test/test_http_sever.o"
+	@echo "... test/test_http_sever.i"
+	@echo "... test/test_http_sever.s"
 	@echo "... test/test_iomanager.o"
 	@echo "... test/test_iomanager.i"
 	@echo "... test/test_iomanager.s"
@@ -1185,9 +1606,15 @@ help:
 	@echo "... test/test_socket.o"
 	@echo "... test/test_socket.i"
 	@echo "... test/test_socket.s"
+	@echo "... test/test_tcp_server.o"
+	@echo "... test/test_tcp_server.i"
+	@echo "... test/test_tcp_server.s"
 	@echo "... test/test_thread.o"
 	@echo "... test/test_thread.i"
 	@echo "... test/test_thread.s"
+	@echo "... test/test_uri.o"
+	@echo "... test/test_uri.i"
+	@echo "... test/test_uri.s"
 	@echo "... test/test_util.o"
 	@echo "... test/test_util.i"
 	@echo "... test/test_util.s"
@@ -1200,6 +1627,9 @@ help:
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"
+	@echo "... uri.o"
+	@echo "... uri.i"
+	@echo "... uri.s"
 	@echo "... util.o"
 	@echo "... util.i"
 	@echo "... util.s"

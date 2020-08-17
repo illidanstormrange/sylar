@@ -12,6 +12,8 @@ find_library(YAMLCPP yaml-cpp)
 
 set(LIB_SRC
 	socket.cc
+	stream.cc
+	socket_stream.cc
 	hook.cc
 	address.cc
 	log.cc
@@ -27,8 +29,13 @@ set(LIB_SRC
 	tcp_server.cc
 	http/http.cc
 	http/http_parser.cc
+	http/http_session.cc
+	http/http_connection.cc
+	http/servlet.cc
+	http/http_server.cc
 	http/http11_parser.cc
 	http/httpclient_parser.cc
+	uri.cc
 	)
 add_library(sylar SHARED ${LIB_SRC})
 
@@ -86,3 +93,23 @@ target_link_libraries(test_http sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
 add_executable(test_http_parser test/test_http_parser.cc)
 add_dependencies(test_http_parser sylar)
 target_link_libraries(test_http_parser sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
+
+add_executable(test_tcp_server test/test_tcp_server.cc)
+add_dependencies(test_tcp_server sylar)
+target_link_libraries(test_tcp_server sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
+
+add_executable(echo_server examples/echo_server.cc)
+add_dependencies(echo_server sylar)
+target_link_libraries(echo_server sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
+
+add_executable(test_http_server test/test_http_sever.cc)
+add_dependencies(test_http_server sylar)
+target_link_libraries(test_http_server sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
+
+add_executable(test_http_connection test/tese_connection.cc)
+add_dependencies(test_http_connection sylar)
+target_link_libraries(test_http_connection sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
+
+add_executable(test_uri test/test_uri.cc)
+add_dependencies(test_uri sylar)
+target_link_libraries(test_uri sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)

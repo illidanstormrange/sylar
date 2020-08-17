@@ -6,15 +6,15 @@ namespace sylar {
 static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 
 static ConfigVar<uint64_t>::ptr g_tcp_server_read_timeout = 
-	sylar::Config::Lookup("tcp_sever.read_timeout", (uint64_t)(60 * 100 * 2), "tcp server read timeout");
+	sylar::Config::Lookup("tcp_sever.read_timeout", (uint64_t)(60 * 1000 * 2), "tcp server read timeout");
 
 TcpServer::TcpServer(sylar::IOManager* worker
 					,sylar::IOManager* accept_worker)
 	:m_worker(worker)
 	,m_accept_worker(accept_worker)
-	,m_readTimeout()
+	,m_recvTimeout(g_tcp_server_read_timeout->getValue())
 	,m_name("sylar/1.0.0")
-	,m_isStop(false) {
+	,m_isStop(true) {
 }
 
 bool TcpServer::bind(sylar::Address::ptr addr) {
@@ -51,13 +51,14 @@ bool TcpServer::bind(const std::vector<Address::ptr>& addrs
 		m_socks.push_back(sock);
 	}
 
-	if(fails.empty()) {
+	if(!fails.empty()) {
 		m_socks.clear();
 		return false;
 	}
 
 	for(auto& i : m_socks) {
-		SYLAR_LOG_INFO(g_logger) << "server bind success: " << *i;
+		SYLAR_LOG_INFO(g_logger) << " name = " << m_name
+			<< "server bind success: " << *i;
 	}
 	return true;
 
@@ -95,6 +96,7 @@ void TcpServer::startAccept(Socket::ptr sock) {
 	while(!m_isStop) {
 		Socket::ptr client = sock->accept();
 		if(client) {
+			client->setRecvTimeout(m_recvTimeout);
 			m_worker->scheduler(std::bind(&TcpServer::handleClient,
 						shared_from_this(), client));
 		} else {

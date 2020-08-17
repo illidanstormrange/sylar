@@ -1,0 +1,1 @@
+/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/echo_server.dir/examples/echo_server.cc.o  -o echo_server -Wl,-rpath,/home/illidan/file/cppfile/firstProject/new/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread -ldl 

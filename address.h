@@ -77,7 +77,7 @@ public:
 	uint32_t getPort() const override;
 	void setPort(uint16_t v) override;
 private:
-	struct sockaddr_in m_addr;
+	sockaddr_in m_addr;
 };
 
 class IPv6Address : public IPAddress {
@@ -99,7 +99,7 @@ public:
 	uint32_t getPort() const override;
 	void setPort(uint16_t v) override;
 private:
-	struct sockaddr_in6 m_addr;
+	sockaddr_in6 m_addr;
 };
 
 class UnixAddress : public Address {
@@ -130,6 +130,8 @@ public:
 private:
 	sockaddr m_addr;
 };
+
+std::ostream& operator<<(std::ostream& os, const Address& addr);
 
 }
 

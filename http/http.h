@@ -211,6 +211,8 @@ public:
 	bool hasParam(const std::string& key, std::string* val = nullptr);
 	bool hasCookie(const std::string& key, std::string* val = nullptr);
 
+	bool isClose() const { return m_close; }
+	void setClose(bool v) { m_close = v; }
 	template<class T>
 	bool checkGetHeaderAs(const std::string& key, T& val, const T& def = T()) {
 		return checkGetAs(m_headers, key, val, def);
@@ -309,6 +311,9 @@ private:
 	
 
 };
+
+std::ostream& operator<<(std::ostream& os, const HttpRequest& req);
+std::ostream& operator<<(std::ostream& os, const HttpResponse& rsp);
 
 }
 }

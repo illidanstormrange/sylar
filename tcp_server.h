@@ -25,9 +25,9 @@ public:
 	virtual bool start();
 	virtual void stop();
 
-	uint64_t getReadTimeout() const {return m_readTimeout; }
+	uint64_t getRecvTimeout() const {return m_recvTimeout; }
 	std::string getName() const { return m_name; }
-	void setReadTimeout(uint64_t v) { m_readTimeout = v; }
+	void setRecvTimeout(uint64_t v) { m_recvTimeout = v; }
 	void setName(const std::string& v) { m_name = v; }
 
 	bool isStop() const { return m_isStop; }
@@ -38,7 +38,7 @@ private:
 	std::vector<Socket::ptr> m_socks;
 	IOManager* m_worker;
 	IOManager* m_accept_worker;
-	uint64_t m_readTimeout;
+	uint64_t m_recvTimeout;
 	std::string m_name;
 	bool m_isStop;
 };

@@ -19,13 +19,13 @@ byteswap(T value) {
 template<class T>
 typename std::enable_if<sizeof(T) == sizeof(uint32_t), T>::type
 byteswap(T value) {
-	return (T)bswap_64((uint32_t)value);	
+	return (T)bswap_32((uint32_t)value);	
 }
 
 template<class T>
 typename std::enable_if<sizeof(T) == sizeof(uint16_t), T>::type
 byteswap(T value) {
-	return (T)bswap_64((uint16_t)value);	
+	return (T)bswap_16((uint16_t)value);	
 }
 
 #if BYTE_ORDER == BIG_ENDIAN
