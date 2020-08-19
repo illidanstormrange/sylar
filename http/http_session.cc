@@ -22,12 +22,12 @@ HttpRequest::ptr HttpSession::recvRequsest() {
 		int len = Streamread(data + offset, buff_size - offset);
 		if(len <= 0) {
 			close();
-			std::cout << "len <= 0" << std::endl;
 			return nullptr;
 		}
 		len += offset;
 		size_t nparse = parser->execute(data, len + offset);
 		if(parser->hasError()) {
+			close();
 			return nullptr;
 		}
 		offset = len - nparse;
@@ -52,10 +52,15 @@ HttpRequest::ptr HttpSession::recvRequsest() {
 
 		if(length > 0) {
 			if(readFixSize(&body[len], length) <= 0) {
+				close();
 				return nullptr;
 			}
 		}
 		parser->getData()->setBody(body);
+	}
+	std::string keep_alive = parser->getData()->getHeader("Connection");
+	if(strcasecmp(keep_alive.c_str(), "keep_alive")) {
+		parser->getData()->setClose(false);
 	}
 	return parser->getData();
 }

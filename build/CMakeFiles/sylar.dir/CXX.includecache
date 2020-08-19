@@ -126,6 +126,56 @@ log.h
 yaml-cpp/yaml.h
 -
 
+/home/illidan/file/cppfile/firstProject/new/sylar/daemon.cc
+daemon.h
+/home/illidan/file/cppfile/firstProject/new/sylar/daemon.h
+log.h
+/home/illidan/file/cppfile/firstProject/new/sylar/log.h
+config.h
+/home/illidan/file/cppfile/firstProject/new/sylar/config.h
+time.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+sstream
+-
+
+/home/illidan/file/cppfile/firstProject/new/sylar/daemon.h
+unistd.h
+-
+functional
+-
+singleton.h
+/home/illidan/file/cppfile/firstProject/new/sylar/singleton.h
+
+/home/illidan/file/cppfile/firstProject/new/sylar/env.cc
+env.h
+/home/illidan/file/cppfile/firstProject/new/sylar/env.h
+log.h
+/home/illidan/file/cppfile/firstProject/new/sylar/log.h
+iostream
+-
+string.h
+-
+stdlib.h
+-
+iomanip
+-
+unistd.h
+-
+
+/home/illidan/file/cppfile/firstProject/new/sylar/env.h
+singleton.h
+/home/illidan/file/cppfile/firstProject/new/sylar/singleton.h
+thread.h
+/home/illidan/file/cppfile/firstProject/new/sylar/thread.h
+map
+-
+vector
+-
+
 /home/illidan/file/cppfile/firstProject/new/sylar/fdmanager.cc
 fdmanager.h
 /home/illidan/file/cppfile/firstProject/new/sylar/fdmanager.h
@@ -299,6 +349,8 @@ http_server.h
 /home/illidan/file/cppfile/firstProject/new/sylar/http/http_server.h
 ../log.h
 /home/illidan/file/cppfile/firstProject/new/sylar/log.h
+iostream
+-
 
 /home/illidan/file/cppfile/firstProject/new/sylar/http/http_server.h
 ../tcp_server.h
@@ -489,6 +541,8 @@ vector
 -
 
 /home/illidan/file/cppfile/firstProject/new/sylar/singleton.h
+memory
+-
 
 /home/illidan/file/cppfile/firstProject/new/sylar/socket.cc
 socket.h
@@ -626,6 +680,8 @@ log.h
 execinfo.h
 -
 stdlib.h
+-
+time.h
 -
 fiber.h
 /home/illidan/file/cppfile/firstProject/new/sylar/fiber.h

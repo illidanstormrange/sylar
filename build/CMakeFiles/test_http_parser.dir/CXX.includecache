@@ -75,6 +75,8 @@ thread.h
 /home/illidan/file/cppfile/firstProject/new/sylar/noncopyable.h
 
 /home/illidan/file/cppfile/firstProject/new/sylar/singleton.h
+memory
+-
 
 /home/illidan/file/cppfile/firstProject/new/sylar/test/test_http_parser.cc
 ../http/http_parser.h

@@ -1,10 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sylar.dir/socket.cc.o"
+  "CMakeFiles/sylar.dir/daemon.cc.o"
   "CMakeFiles/sylar.dir/stream.cc.o"
   "CMakeFiles/sylar.dir/socket_stream.cc.o"
   "CMakeFiles/sylar.dir/hook.cc.o"
   "CMakeFiles/sylar.dir/address.cc.o"
   "CMakeFiles/sylar.dir/log.cc.o"
+  "CMakeFiles/sylar.dir/env.cc.o"
   "CMakeFiles/sylar.dir/util.cc.o"
   "CMakeFiles/sylar.dir/config.cc.o"
   "CMakeFiles/sylar.dir/thread.cc.o"

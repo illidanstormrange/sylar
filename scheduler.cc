@@ -53,22 +53,20 @@ void Scheduler::setThis() {
 }
 
 void Scheduler::start() {
-	SYLAR_LOG_INFO(g_logger_s) << "start";
-	{
-		MutexType::Lock lock(m_mutex);
-		if(!m_stopping) {
-			return;
-		}
-		m_stopping = false;
-		SYLAR_ASSERT(m_threads.empty());
-	
-		m_threads.resize(m_threadCount);
-		for(size_t i = 0; i < m_threadCount; ++i) {
-			m_threads[i].reset(new Thread(std::bind(&Scheduler::run, this)
-						, m_name + "_" + std::to_string(i)));
-			m_threadIds.push_back(m_threads[i]->getId());
-		}
+	MutexType::Lock lock(m_mutex);
+	if(!m_stopping) {
+		return;
 	}
+	m_stopping = false;
+	SYLAR_ASSERT(m_threads.empty());
+
+	m_threads.resize(m_threadCount);
+	for(size_t i = 0; i < m_threadCount; ++i) {
+		m_threads[i].reset(new Thread(std::bind(&Scheduler::run, this)
+					, m_name + "_" + std::to_string(i)));
+		m_threadIds.push_back(m_threads[i]->getId());
+	}
+	lock.unlock();
 
 	//if(m_rootFiber) {
 	//	m_rootFiber->call();
@@ -132,7 +130,6 @@ void Scheduler::stop() {
 }
 
 void Scheduler::run() {
-	SYLAR_LOG_INFO(g_logger_s) << m_name << "run start";
 	set_hook_enable(true);
 	setThis();
 	if(sylar::GetThreadId() != m_rootThread) {

@@ -1,6 +1,7 @@
 #ifndef __SYLAR_SIGNLETON_H__
 #define __SYLAR_SIGNLETON_H__
 
+#include <memory>
 
 namespace sylar{
 

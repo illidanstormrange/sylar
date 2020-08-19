@@ -2,6 +2,7 @@
 #include "log.h"
 #include <execinfo.h>
 #include <stdlib.h>
+#include <time.h>
 #include "fiber.h"
 
 namespace sylar{
@@ -55,4 +56,11 @@ uint64_t GetCurrentUs() {
 	return val.tv_sec * 1000 * 1000ul + val.tv_usec;
 }
 
+std::string Time2Str(time_t ts, const std::string& format) {
+	struct tm tm;
+	localtime_r(&ts, &tm);
+	char buf[64];
+	strftime(buf, sizeof(buf), format.c_str(), &tm);
+	return buf;
+}
 }

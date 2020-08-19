@@ -216,6 +216,7 @@ void on_response_http_field(void* data, const char* field, size_t flen
 	}
 	parser->getData()->setHeader(std::string(field, flen)
 								,std::string(value, vlen));
+	SYLAR_LOG_INFO(g_logger) << std::string(field, flen) << " " << std::string(value, vlen);
 }
 
 

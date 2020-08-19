@@ -105,6 +105,8 @@ vector
 -
 
 .././singleton.h
+memory
+-
 
 .././sylar.h
 log.h

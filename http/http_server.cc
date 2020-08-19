@@ -1,5 +1,6 @@
 #include "http_server.h"
 #include "../log.h"
+#include <iostream>
 
 namespace sylar {
 namespace http {
@@ -15,7 +16,7 @@ HttpServer::HttpServer(bool keepalive
 
 
 void HttpServer::handleClient(Socket::ptr client) {
-	SYLAR_LOG_DEBUG(g_logger) << "handleClient" << *client;
+	//SYLAR_LOG_DEBUG(g_logger) << "handleClient" << *client;
 	HttpSession::ptr session(new HttpSession(client));
 	do {
 		auto req = session->recvRequsest();
@@ -25,15 +26,21 @@ void HttpServer::handleClient(Socket::ptr client) {
 				<< " client:" << *client;
 			break;
 		}
+		//SYLAR_LOG_INFO(g_logger) << "requset: " << std::endl
+		//	<< *req;
 
 		HttpResponse::ptr rsp(new HttpResponse(req->getVersion()
 					,req->isClose() || m_isKeepalive));
+		rsp->setHeader("Server", getName());
 		m_dispatch->handle(req, rsp, session);
-//		rsp->setBody("hello sylar");
-//		SYLAR_LOG_INFO(g_logger) << "request:" << *req
-//			<< " response: " << *rsp;
 		session->sendRespons(rsp);
-	} while(m_isKeepalive);
+		//SYLAR_LOG_INFO(g_logger) << "rsponse: " << std::endl
+		//	<< *rsp;
+
+		if(!m_isKeepalive || req->isClose()) {
+			break;
+		}
+	} while(true);
 	session->close();
 }
 }

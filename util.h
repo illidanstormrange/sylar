@@ -22,6 +22,8 @@ std::string BacktraceTostring(int size = 64, int skip = 2, const std::string& pr
 
 uint64_t GetCurrentMS();
 uint64_t GetCurrentUs();
+
+std::string Time2Str(time_t ts = time(0), const std::string& formart = "%Y-%m-%d %H:%M：%S");
 }
 	
 

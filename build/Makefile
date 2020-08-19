@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named my_http_server
+
+# Build rule for target.
+my_http_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_http_server
+.PHONY : my_http_server
+
+# fast build rule for target.
+my_http_server/fast:
+	$(MAKE) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/build
+.PHONY : my_http_server/fast
+
+#=============================================================================
 # Target rules for targets named test_uri
 
 # Build rule for target.
@@ -125,6 +138,19 @@ test_uri: cmake_check_build_system
 test_uri/fast:
 	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/build
 .PHONY : test_uri/fast
+
+#=============================================================================
+# Target rules for targets named test_env
+
+# Build rule for target.
+test_env: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_env
+.PHONY : test_env
+
+# fast build rule for target.
+test_env/fast:
+	$(MAKE) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/build
+.PHONY : test_env/fast
 
 #=============================================================================
 # Target rules for targets named test_http_connection
@@ -242,6 +268,19 @@ text_config: cmake_check_build_system
 text_config/fast:
 	$(MAKE) -f CMakeFiles/text_config.dir/build.make CMakeFiles/text_config.dir/build
 .PHONY : text_config/fast
+
+#=============================================================================
+# Target rules for targets named test_daemon
+
+# Build rule for target.
+test_daemon: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_daemon
+.PHONY : test_daemon
+
+# fast build rule for target.
+test_daemon/fast:
+	$(MAKE) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/build
+.PHONY : test_daemon/fast
 
 #=============================================================================
 # Target rules for targets named test_iomanager
@@ -427,6 +466,60 @@ config.s: config.cc.s
 config.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/config.cc.s
 .PHONY : config.cc.s
+
+daemon.o: daemon.cc.o
+
+.PHONY : daemon.o
+
+# target to build an object file
+daemon.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/daemon.cc.o
+.PHONY : daemon.cc.o
+
+daemon.i: daemon.cc.i
+
+.PHONY : daemon.i
+
+# target to preprocess a source file
+daemon.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/daemon.cc.i
+.PHONY : daemon.cc.i
+
+daemon.s: daemon.cc.s
+
+.PHONY : daemon.s
+
+# target to generate assembly for a file
+daemon.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/daemon.cc.s
+.PHONY : daemon.cc.s
+
+env.o: env.cc.o
+
+.PHONY : env.o
+
+# target to build an object file
+env.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/env.cc.o
+.PHONY : env.cc.o
+
+env.i: env.cc.i
+
+.PHONY : env.i
+
+# target to preprocess a source file
+env.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/env.cc.i
+.PHONY : env.cc.i
+
+env.s: env.cc.s
+
+.PHONY : env.s
+
+# target to generate assembly for a file
+env.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/env.cc.s
+.PHONY : env.cc.s
 
 examples/echo_server.o: examples/echo_server.cc.o
 
@@ -806,6 +899,33 @@ log.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/log.cc.s
 .PHONY : log.cc.s
 
+samples/my_http_server.o: samples/my_http_server.cc.o
+
+.PHONY : samples/my_http_server.o
+
+# target to build an object file
+samples/my_http_server.cc.o:
+	$(MAKE) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o
+.PHONY : samples/my_http_server.cc.o
+
+samples/my_http_server.i: samples/my_http_server.cc.i
+
+.PHONY : samples/my_http_server.i
+
+# target to preprocess a source file
+samples/my_http_server.cc.i:
+	$(MAKE) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/samples/my_http_server.cc.i
+.PHONY : samples/my_http_server.cc.i
+
+samples/my_http_server.s: samples/my_http_server.cc.s
+
+.PHONY : samples/my_http_server.s
+
+# target to generate assembly for a file
+samples/my_http_server.cc.s:
+	$(MAKE) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/samples/my_http_server.cc.s
+.PHONY : samples/my_http_server.cc.s
+
 scheduler.o: scheduler.cc.o
 
 .PHONY : scheduler.o
@@ -1021,6 +1141,60 @@ test/test_bytearray.s: test/test_bytearray.cc.s
 test/test_bytearray.cc.s:
 	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/test/test_bytearray.cc.s
 .PHONY : test/test_bytearray.cc.s
+
+test/test_deamon.o: test/test_deamon.cc.o
+
+.PHONY : test/test_deamon.o
+
+# target to build an object file
+test/test_deamon.cc.o:
+	$(MAKE) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/test/test_deamon.cc.o
+.PHONY : test/test_deamon.cc.o
+
+test/test_deamon.i: test/test_deamon.cc.i
+
+.PHONY : test/test_deamon.i
+
+# target to preprocess a source file
+test/test_deamon.cc.i:
+	$(MAKE) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/test/test_deamon.cc.i
+.PHONY : test/test_deamon.cc.i
+
+test/test_deamon.s: test/test_deamon.cc.s
+
+.PHONY : test/test_deamon.s
+
+# target to generate assembly for a file
+test/test_deamon.cc.s:
+	$(MAKE) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/test/test_deamon.cc.s
+.PHONY : test/test_deamon.cc.s
+
+test/test_env.o: test/test_env.cc.o
+
+.PHONY : test/test_env.o
+
+# target to build an object file
+test/test_env.cc.o:
+	$(MAKE) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/test/test_env.cc.o
+.PHONY : test/test_env.cc.o
+
+test/test_env.i: test/test_env.cc.i
+
+.PHONY : test/test_env.i
+
+# target to preprocess a source file
+test/test_env.cc.i:
+	$(MAKE) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/test/test_env.cc.i
+.PHONY : test/test_env.cc.i
+
+test/test_env.s: test/test_env.cc.s
+
+.PHONY : test/test_env.s
+
+# target to generate assembly for a file
+test/test_env.cc.s:
+	$(MAKE) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/test/test_env.cc.s
+.PHONY : test/test_env.cc.s
 
 test/test_fiber.o: test/test_fiber.cc.o
 
@@ -1488,7 +1662,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... my_http_server"
 	@echo "... test_uri"
+	@echo "... test_env"
 	@echo "... test_http_connection"
 	@echo "... test_scheduler"
 	@echo "... test_socket"
@@ -1499,6 +1675,7 @@ help:
 	@echo "... test_fiber"
 	@echo "... sylar"
 	@echo "... text_config"
+	@echo "... test_daemon"
 	@echo "... test_iomanager"
 	@echo "... test_hook"
 	@echo "... test_address"
@@ -1516,6 +1693,12 @@ help:
 	@echo "... config.o"
 	@echo "... config.i"
 	@echo "... config.s"
+	@echo "... daemon.o"
+	@echo "... daemon.i"
+	@echo "... daemon.s"
+	@echo "... env.o"
+	@echo "... env.i"
+	@echo "... env.s"
 	@echo "... examples/echo_server.o"
 	@echo "... examples/echo_server.i"
 	@echo "... examples/echo_server.s"
@@ -1558,6 +1741,9 @@ help:
 	@echo "... log.o"
 	@echo "... log.i"
 	@echo "... log.s"
+	@echo "... samples/my_http_server.o"
+	@echo "... samples/my_http_server.i"
+	@echo "... samples/my_http_server.s"
 	@echo "... scheduler.o"
 	@echo "... scheduler.i"
 	@echo "... scheduler.s"
@@ -1582,6 +1768,12 @@ help:
 	@echo "... test/test_bytearray.o"
 	@echo "... test/test_bytearray.i"
 	@echo "... test/test_bytearray.s"
+	@echo "... test/test_deamon.o"
+	@echo "... test/test_deamon.i"
+	@echo "... test/test_deamon.s"
+	@echo "... test/test_env.o"
+	@echo "... test/test_env.i"
+	@echo "... test/test_env.s"
 	@echo "... test/test_fiber.o"
 	@echo "... test/test_fiber.i"
 	@echo "... test/test_fiber.s"

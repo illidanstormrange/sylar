@@ -12,11 +12,13 @@ find_library(YAMLCPP yaml-cpp)
 
 set(LIB_SRC
 	socket.cc
+	daemon.cc
 	stream.cc
 	socket_stream.cc
 	hook.cc
 	address.cc
 	log.cc
+	env.cc
 	util.cc
 	config.cc
 	thread.cc
@@ -113,3 +115,15 @@ target_link_libraries(test_http_connection sylar -L/usr/lib -lyaml-cpp -lpthread
 add_executable(test_uri test/test_uri.cc)
 add_dependencies(test_uri sylar)
 target_link_libraries(test_uri sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
+
+add_executable(my_http_server samples/my_http_server.cc)
+add_dependencies(my_http_server sylar)
+target_link_libraries(my_http_server sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
+
+add_executable(test_daemon test/test_deamon.cc)
+add_dependencies(test_daemon sylar)
+target_link_libraries(test_daemon sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)
+
+add_executable(test_env test/test_env.cc)
+add_dependencies(test_env sylar)
+target_link_libraries(test_env sylar -L/usr/lib -lyaml-cpp -lpthread -ldl)

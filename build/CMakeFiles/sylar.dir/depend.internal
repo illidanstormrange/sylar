@@ -27,6 +27,23 @@ CMakeFiles/sylar.dir/config.cc.o
  /home/illidan/file/cppfile/firstProject/new/sylar/singleton.h
  /home/illidan/file/cppfile/firstProject/new/sylar/thread.h
  /home/illidan/file/cppfile/firstProject/new/sylar/util.h
+CMakeFiles/sylar.dir/daemon.cc.o
+ /home/illidan/file/cppfile/firstProject/new/sylar/config.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/daemon.cc
+ /home/illidan/file/cppfile/firstProject/new/sylar/daemon.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/log.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/noncopyable.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/singleton.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/thread.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/util.h
+CMakeFiles/sylar.dir/env.cc.o
+ /home/illidan/file/cppfile/firstProject/new/sylar/env.cc
+ /home/illidan/file/cppfile/firstProject/new/sylar/env.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/log.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/noncopyable.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/singleton.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/thread.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/util.h
 CMakeFiles/sylar.dir/fdmanager.cc.o
  .././timer.h
  /home/illidan/file/cppfile/firstProject/new/sylar/fdmanager.cc

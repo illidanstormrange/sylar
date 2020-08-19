@@ -268,7 +268,7 @@ bool IOManager::stopping(uint64_t& next_timeout) {
 
 bool IOManager::stopping() {
 	uint64_t timeout = 0;
-	stopping(timeout);
+    return stopping(timeout);
 }
 void IOManager::idle() {
 	epoll_event* events = new epoll_event[64]();

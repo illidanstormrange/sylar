@@ -27,6 +27,23 @@ CMakeFiles/sylar.dir/config.cc.o: ../singleton.h
 CMakeFiles/sylar.dir/config.cc.o: ../thread.h
 CMakeFiles/sylar.dir/config.cc.o: ../util.h
 
+CMakeFiles/sylar.dir/daemon.cc.o: ../config.h
+CMakeFiles/sylar.dir/daemon.cc.o: ../daemon.cc
+CMakeFiles/sylar.dir/daemon.cc.o: ../daemon.h
+CMakeFiles/sylar.dir/daemon.cc.o: ../log.h
+CMakeFiles/sylar.dir/daemon.cc.o: ../noncopyable.h
+CMakeFiles/sylar.dir/daemon.cc.o: ../singleton.h
+CMakeFiles/sylar.dir/daemon.cc.o: ../thread.h
+CMakeFiles/sylar.dir/daemon.cc.o: ../util.h
+
+CMakeFiles/sylar.dir/env.cc.o: ../env.cc
+CMakeFiles/sylar.dir/env.cc.o: ../env.h
+CMakeFiles/sylar.dir/env.cc.o: ../log.h
+CMakeFiles/sylar.dir/env.cc.o: ../noncopyable.h
+CMakeFiles/sylar.dir/env.cc.o: ../singleton.h
+CMakeFiles/sylar.dir/env.cc.o: ../thread.h
+CMakeFiles/sylar.dir/env.cc.o: ../util.h
+
 CMakeFiles/sylar.dir/fdmanager.cc.o: .././timer.h
 CMakeFiles/sylar.dir/fdmanager.cc.o: ../fdmanager.cc
 CMakeFiles/sylar.dir/fdmanager.cc.o: ../fdmanager.h

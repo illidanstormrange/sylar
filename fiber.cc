@@ -43,8 +43,8 @@ Fiber::Fiber() {
 }
 
 Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool use_caller) 
-	:m_cb(cb)
-	,m_id(++s_fiber_id){
+	:m_id(++s_fiber_id)
+	,m_cb(cb) {
 	SYLAR_LOG_INFO(g_logger) << "Fiber() id = "
 			<< m_id;
 	++s_fiber_count;

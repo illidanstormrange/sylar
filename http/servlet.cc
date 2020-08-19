@@ -25,7 +25,6 @@ int32_t ServletDispatch::handle(sylar::http::HttpRequest::ptr request
 		,sylar::http::HttpResponse::ptr response
 		,sylar::http::HttpSession::ptr session)  {
 	auto slt = getMatchedServlet(request->getPath());
-	std::cout << request->getPath() << std::endl;
 	if(slt) {
 		slt->handle(request, response, session);
 	}
@@ -117,8 +116,8 @@ NotFoundServlet::NotFoundServlet(const std::string& name)
 int32_t NotFoundServlet::handle(sylar::http::HttpRequest::ptr request
 			,sylar::http::HttpResponse::ptr response
 			,sylar::http::HttpSession::ptr session) {
-	response->setHeader("Content-Type", "test/html");
-	response->setHeader("Sylar", "1.0.0");
+	response->setHeader("Content-Type", "text/html");
+	response->setHeader("Server", "sylar/1.0.0");
 	response->setStatus(HttpStatus::NOT_FOUND);
 	response->setBody(m_content);
 	return 0;
