@@ -1,9 +1,8 @@
 #ifndef __SYLAR_SCHEDULER_H__
 #define __SYLAR_SCHEDULER_H__
 
-#include "thread.h"
 #include "fiber.h"
-#include "macro.h"
+#include "thread.h"
 #include <memory.h>
 #include <string>
 #include <list>
@@ -55,6 +54,7 @@ public:
 		}
 	}
 
+	std::ostream& dump(std::ostream& os);
 protected:
 	virtual void tickle();
 	void run();

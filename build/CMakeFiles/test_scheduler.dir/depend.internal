@@ -6,6 +6,7 @@ CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o
  .././fiber.h
  .././log.h
  .././macro.h
+ .././mutex.h
  .././noncopyable.h
  .././scheduler.h
  .././singleton.h

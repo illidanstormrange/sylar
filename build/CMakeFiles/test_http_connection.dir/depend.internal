@@ -6,14 +6,10 @@ CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o
  /home/illidan/file/cppfile/firstProject/new/sylar/bytearry.h
  /home/illidan/file/cppfile/firstProject/new/sylar/fiber.h
  /home/illidan/file/cppfile/firstProject/new/sylar/http/http.h
- /home/illidan/file/cppfile/firstProject/new/sylar/http/http11_common.h
- /home/illidan/file/cppfile/firstProject/new/sylar/http/http11_parser.h
  /home/illidan/file/cppfile/firstProject/new/sylar/http/http_connection.h
- /home/illidan/file/cppfile/firstProject/new/sylar/http/http_parser.h
- /home/illidan/file/cppfile/firstProject/new/sylar/http/httpclient_parser.h
  /home/illidan/file/cppfile/firstProject/new/sylar/iomanager.h
  /home/illidan/file/cppfile/firstProject/new/sylar/log.h
- /home/illidan/file/cppfile/firstProject/new/sylar/macro.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/mutex.h
  /home/illidan/file/cppfile/firstProject/new/sylar/noncopyable.h
  /home/illidan/file/cppfile/firstProject/new/sylar/scheduler.h
  /home/illidan/file/cppfile/firstProject/new/sylar/singleton.h

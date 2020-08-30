@@ -113,5 +113,17 @@ std::string Env::getEnv(const std::string& key, const std::string& defaut_val) {
 	return v;
 }
 
+std::string Env::getAbsolutePath(const std::string& path) const {
+	if(path.empty()) {
+		return "/";
+	}
+	if(path[0] == '/') {
+		return path;
+	}
+	return m_cwd + path;
+}
+std::string Env::getConfigPath() {
+	return getAbsolutePath(get("c", "conf"));
+}
 
 }

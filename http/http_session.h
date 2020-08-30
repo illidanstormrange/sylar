@@ -3,7 +3,6 @@
 
 #include "../socket_stream.h"
 #include "http.h"
-#include "http_parser.h"
 
 namespace sylar { 
 namespace http {

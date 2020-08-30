@@ -1,0 +1,1 @@
+/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/test_application.dir/test/tese_application.cc.o  -o test_application -Wl,-rpath,/home/illidan/file/cppfile/firstProject/new/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread -ldl -lssl -lcrypto -ljsoncpp 

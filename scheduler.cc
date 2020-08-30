@@ -1,10 +1,12 @@
 #include "scheduler.h"
+
 #include "hook.h"
+#include "macro.h"
 #include <iostream>
 #include "log.h"
 
 namespace sylar {
-Logger::ptr g_logger_s = SYLAR_LOG_NAME("system");
+static Logger::ptr g_logger_s = SYLAR_LOG_NAME("system");
 
 static thread_local Scheduler* t_scheduler = nullptr;
 static thread_local Fiber* t_fiber = nullptr;
@@ -238,5 +240,20 @@ void Scheduler::idle() {
 		sylar::Fiber::YieldToHold();
 	}
 
+}
+std::ostream& Scheduler::dump(std::ostream& os) {
+	os << "[Scheduler name=" << m_name
+	   << " size=" << m_threadCount
+	   << " active_count=" << m_activeThreadCount
+	   << " idle_count=" << m_idleThreadCount
+	   << " stopping=" << m_stopping
+	   << "]" << std::endl << "    ";
+	for(size_t i = 0; i < m_threadIds.size(); ++i) {
+		if(i) {
+			os << ", ";
+		}
+		os << m_threadIds[i];
+	}
+	return os;
 }
 }

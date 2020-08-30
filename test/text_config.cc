@@ -1,5 +1,6 @@
-#include "config.h"
-#include "log.h"
+#include "../config.h"
+#include "../log.h"
+#include "../env.h"
 #include <yaml-cpp/yaml.h>
 #include <iostream>
 
@@ -185,11 +186,18 @@ void test_log() {
 	SYLAR_LOG_INFO(system_log) << "hello system "; 
 }
 
+void test_dir() {
+	sylar::Config::LoadFromConfDir("../bin/conf", true);
+}
+
 int main() 
 {	
 	//test_yml();
 	//test_config();
 	//test_class();
-	test_log();
+	//test_log();
+	test_dir();
+	std::cout << "-----" << std::endl;
+	test_dir();
 	return 0;
 }

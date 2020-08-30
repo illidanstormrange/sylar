@@ -7,6 +7,7 @@ CMakeFiles/test_socket.dir/test/test_socket.cc.o: ../fiber.h
 CMakeFiles/test_socket.dir/test/test_socket.cc.o: ../iomanager.h
 CMakeFiles/test_socket.dir/test/test_socket.cc.o: ../log.h
 CMakeFiles/test_socket.dir/test/test_socket.cc.o: ../macro.h
+CMakeFiles/test_socket.dir/test/test_socket.cc.o: ../mutex.h
 CMakeFiles/test_socket.dir/test/test_socket.cc.o: ../noncopyable.h
 CMakeFiles/test_socket.dir/test/test_socket.cc.o: ../scheduler.h
 CMakeFiles/test_socket.dir/test/test_socket.cc.o: ../singleton.h

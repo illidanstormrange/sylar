@@ -5,6 +5,7 @@ CMakeFiles/test_fiber.dir/test/test_fiber.cc.o: ../config.h
 CMakeFiles/test_fiber.dir/test/test_fiber.cc.o: ../fiber.h
 CMakeFiles/test_fiber.dir/test/test_fiber.cc.o: ../log.h
 CMakeFiles/test_fiber.dir/test/test_fiber.cc.o: ../macro.h
+CMakeFiles/test_fiber.dir/test/test_fiber.cc.o: ../mutex.h
 CMakeFiles/test_fiber.dir/test/test_fiber.cc.o: ../noncopyable.h
 CMakeFiles/test_fiber.dir/test/test_fiber.cc.o: ../scheduler.h
 CMakeFiles/test_fiber.dir/test/test_fiber.cc.o: ../singleton.h

@@ -5,7 +5,6 @@
 #include "../uri.h"
 #include "../thread.h"
 #include "http.h"
-#include "http_parser.h"
 
 #include <vector>
 #include <list>

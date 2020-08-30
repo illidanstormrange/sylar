@@ -7,8 +7,6 @@
 #include <iostream>
 #include <sstream>
 #include <boost/lexical_cast.hpp>
-#include "http11_parser.h"
-#include "httpclient_parser.h"
 
 
 namespace sylar{
@@ -169,12 +167,14 @@ T getAs(const MapType& m, const std::string& key, const T& def = T()) {
 	return def;
 }
 
+class HttpResponse;
 class HttpRequest {
 public:
 	typedef std::shared_ptr<HttpRequest> ptr;
 
 	typedef std::map<std::string, std::string, CaseInsensitiveLess> MapType;
 	HttpRequest(uint8_t version = 0x11, bool close = true);
+	std::shared_ptr<HttpResponse> createResponse();
 
 	HttpMethod getMethod() const { return m_method; }
 	uint8_t getVersion() const { return m_version; }
@@ -213,6 +213,10 @@ public:
 
 	bool isClose() const { return m_close; }
 	void setClose(bool v) { m_close = v; }
+
+	bool isWebsocket() const { return m_websocket; }
+	void setWebsocket(bool v) { m_websocket = v; }
+
 	template<class T>
 	bool checkGetHeaderAs(const std::string& key, T& val, const T& def = T()) {
 		return checkGetAs(m_headers, key, val, def);
@@ -252,6 +256,7 @@ private:
 	HttpMethod m_method;
 	uint8_t m_version;
 	bool m_close;
+	bool m_websocket;
 
 	std::string m_path;
 	std::string m_query;
@@ -285,6 +290,9 @@ public:
 	bool isClose() const { return m_close; }
 	void setClose(bool v) { m_close = v; }
 
+	bool isWebsocket() const { return m_websocket; }
+	void setWebsocket(bool v) { m_websocket = v; }
+
 	std::string getHeader(const std::string& key, const std::string& def = "") const;
 	void setHeader(const std::string& key, const std::string& val);
 	void delHeader(const std::string& key);
@@ -305,6 +313,7 @@ private:
 	HttpStatus m_status;
 	uint8_t m_version;
 	bool m_close;
+	bool m_websocket;
 	std::string m_body;
 	std::string m_reason;
 	MapType m_headers;

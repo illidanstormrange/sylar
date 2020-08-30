@@ -5,7 +5,7 @@ CMakeFiles/test_daemon.dir/test/test_deamon.cc.o: ../daemon.h
 CMakeFiles/test_daemon.dir/test/test_deamon.cc.o: ../fiber.h
 CMakeFiles/test_daemon.dir/test/test_deamon.cc.o: ../iomanager.h
 CMakeFiles/test_daemon.dir/test/test_deamon.cc.o: ../log.h
-CMakeFiles/test_daemon.dir/test/test_deamon.cc.o: ../macro.h
+CMakeFiles/test_daemon.dir/test/test_deamon.cc.o: ../mutex.h
 CMakeFiles/test_daemon.dir/test/test_deamon.cc.o: ../noncopyable.h
 CMakeFiles/test_daemon.dir/test/test_deamon.cc.o: ../scheduler.h
 CMakeFiles/test_daemon.dir/test/test_deamon.cc.o: ../singleton.h

@@ -1,12 +1,12 @@
 #ifndef __SYLAR_FIBER_H__
 #define __SYLAR_FIBER_H__
 
-#include <memory.h>
+#include <memory>
 #include <functional>
 #include <ucontext.h>
-#include "thread.h"
 
 namespace sylar {
+
 
 class Scheduler;
 class Fiber : public std::enable_shared_from_this<Fiber> {

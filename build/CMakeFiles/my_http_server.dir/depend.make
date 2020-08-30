@@ -3,18 +3,15 @@
 
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../address.h
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../bytearry.h
+CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../config.h
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../fiber.h
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../http/http.h
-CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../http/http11_common.h
-CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../http/http11_parser.h
-CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../http/http_parser.h
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../http/http_server.h
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../http/http_session.h
-CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../http/httpclient_parser.h
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../http/servlet.h
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../iomanager.h
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../log.h
-CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../macro.h
+CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../mutex.h
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../noncopyable.h
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../samples/my_http_server.cc
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o: ../scheduler.h

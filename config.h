@@ -12,8 +12,10 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <functional>
-#include "log.h"
 #include <yaml-cpp/yaml.h>
+#include "log.h"
+#include "thread.h"
+#include "util.h"
 
 namespace sylar{
 
@@ -352,6 +354,8 @@ public:
 		}
 
 	static void LoadFromYaml(const YAML::Node& root);
+
+	static void LoadFromConfDir(const std::string& path, bool force);
 
 	static ConfigVarBase::ptr LookupBase(const std::string& name);
 

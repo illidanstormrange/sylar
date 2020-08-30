@@ -1,8 +1,8 @@
 #include "fiber.h"
-#include "scheduler.h"
 #include "log.h"
 #include "config.h"
 #include "macro.h"
+#include "scheduler.h"
 #include <atomic>
 
 namespace sylar {
@@ -45,8 +45,8 @@ Fiber::Fiber() {
 Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool use_caller) 
 	:m_id(++s_fiber_id)
 	,m_cb(cb) {
-	SYLAR_LOG_INFO(g_logger) << "Fiber() id = "
-			<< m_id;
+	//SYLAR_LOG_INFO(g_logger) << "Fiber() id = "
+	//		<< m_id;
 	++s_fiber_count;
 	m_stacksize = stacksize ? stacksize : g_fiber_stack_size->getValue();
 
@@ -65,8 +65,8 @@ Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool use_caller)
 	}
 }
 Fiber::~Fiber() {
-	SYLAR_LOG_INFO(g_logger) << "~Fiber() fiberId = "
-			<< m_id << "m_state = " << m_state;
+	//SYLAR_LOG_INFO(g_logger) << "~Fiber() fiberId = "
+	//		<< m_id << "m_state = " << m_state;
 	--s_fiber_count;
 	if(m_stack) {
 		SYLAR_ASSERT(m_state == TERM 

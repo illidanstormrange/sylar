@@ -322,6 +322,19 @@ test_address/fast:
 .PHONY : test_address/fast
 
 #=============================================================================
+# Target rules for targets named test_application
+
+# Build rule for target.
+test_application: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_application
+.PHONY : test_application
+
+# fast build rule for target.
+test_application/fast:
+	$(MAKE) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/build
+.PHONY : test_application/fast
+
+#=============================================================================
 # Target rules for targets named test_tcp_server
 
 # Build rule for target.
@@ -412,6 +425,33 @@ address.s: address.cc.s
 address.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/address.cc.s
 .PHONY : address.cc.s
+
+application.o: application.cc.o
+
+.PHONY : application.o
+
+# target to build an object file
+application.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/application.cc.o
+.PHONY : application.cc.o
+
+application.i: application.cc.i
+
+.PHONY : application.i
+
+# target to preprocess a source file
+application.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/application.cc.i
+.PHONY : application.cc.i
+
+application.s: application.cc.s
+
+.PHONY : application.s
+
+# target to generate assembly for a file
+application.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/application.cc.s
+.PHONY : application.cc.s
 
 bytearry.o: bytearry.cc.o
 
@@ -845,6 +885,87 @@ http/servlet.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/servlet.cc.s
 .PHONY : http/servlet.cc.s
 
+http/ws_server.o: http/ws_server.cc.o
+
+.PHONY : http/ws_server.o
+
+# target to build an object file
+http/ws_server.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/ws_server.cc.o
+.PHONY : http/ws_server.cc.o
+
+http/ws_server.i: http/ws_server.cc.i
+
+.PHONY : http/ws_server.i
+
+# target to preprocess a source file
+http/ws_server.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/ws_server.cc.i
+.PHONY : http/ws_server.cc.i
+
+http/ws_server.s: http/ws_server.cc.s
+
+.PHONY : http/ws_server.s
+
+# target to generate assembly for a file
+http/ws_server.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/ws_server.cc.s
+.PHONY : http/ws_server.cc.s
+
+http/ws_servlet.o: http/ws_servlet.cc.o
+
+.PHONY : http/ws_servlet.o
+
+# target to build an object file
+http/ws_servlet.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/ws_servlet.cc.o
+.PHONY : http/ws_servlet.cc.o
+
+http/ws_servlet.i: http/ws_servlet.cc.i
+
+.PHONY : http/ws_servlet.i
+
+# target to preprocess a source file
+http/ws_servlet.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/ws_servlet.cc.i
+.PHONY : http/ws_servlet.cc.i
+
+http/ws_servlet.s: http/ws_servlet.cc.s
+
+.PHONY : http/ws_servlet.s
+
+# target to generate assembly for a file
+http/ws_servlet.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/ws_servlet.cc.s
+.PHONY : http/ws_servlet.cc.s
+
+http/ws_session.o: http/ws_session.cc.o
+
+.PHONY : http/ws_session.o
+
+# target to build an object file
+http/ws_session.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/ws_session.cc.o
+.PHONY : http/ws_session.cc.o
+
+http/ws_session.i: http/ws_session.cc.i
+
+.PHONY : http/ws_session.i
+
+# target to preprocess a source file
+http/ws_session.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/ws_session.cc.i
+.PHONY : http/ws_session.cc.i
+
+http/ws_session.s: http/ws_session.cc.s
+
+.PHONY : http/ws_session.s
+
+# target to generate assembly for a file
+http/ws_session.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/http/ws_session.cc.s
+.PHONY : http/ws_session.cc.s
+
 iomanager.o: iomanager.cc.o
 
 .PHONY : iomanager.o
@@ -872,6 +993,33 @@ iomanager.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/iomanager.cc.s
 .PHONY : iomanager.cc.s
 
+library.o: library.cc.o
+
+.PHONY : library.o
+
+# target to build an object file
+library.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/library.cc.o
+.PHONY : library.cc.o
+
+library.i: library.cc.i
+
+.PHONY : library.i
+
+# target to preprocess a source file
+library.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/library.cc.i
+.PHONY : library.cc.i
+
+library.s: library.cc.s
+
+.PHONY : library.s
+
+# target to generate assembly for a file
+library.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/library.cc.s
+.PHONY : library.cc.s
+
 log.o: log.cc.o
 
 .PHONY : log.o
@@ -898,6 +1046,60 @@ log.s: log.cc.s
 log.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/log.cc.s
 .PHONY : log.cc.s
+
+module.o: module.cc.o
+
+.PHONY : module.o
+
+# target to build an object file
+module.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/module.cc.o
+.PHONY : module.cc.o
+
+module.i: module.cc.i
+
+.PHONY : module.i
+
+# target to preprocess a source file
+module.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/module.cc.i
+.PHONY : module.cc.i
+
+module.s: module.cc.s
+
+.PHONY : module.s
+
+# target to generate assembly for a file
+module.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/module.cc.s
+.PHONY : module.cc.s
+
+mutex.o: mutex.cc.o
+
+.PHONY : mutex.o
+
+# target to build an object file
+mutex.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/mutex.cc.o
+.PHONY : mutex.cc.o
+
+mutex.i: mutex.cc.i
+
+.PHONY : mutex.i
+
+# target to preprocess a source file
+mutex.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/mutex.cc.i
+.PHONY : mutex.cc.i
+
+mutex.s: mutex.cc.s
+
+.PHONY : mutex.s
+
+# target to generate assembly for a file
+mutex.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/mutex.cc.s
+.PHONY : mutex.cc.s
 
 samples/my_http_server.o: samples/my_http_server.cc.o
 
@@ -1060,6 +1262,33 @@ tcp_server.s: tcp_server.cc.s
 tcp_server.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/tcp_server.cc.s
 .PHONY : tcp_server.cc.s
+
+test/tese_application.o: test/tese_application.cc.o
+
+.PHONY : test/tese_application.o
+
+# target to build an object file
+test/tese_application.cc.o:
+	$(MAKE) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/test/tese_application.cc.o
+.PHONY : test/tese_application.cc.o
+
+test/tese_application.i: test/tese_application.cc.i
+
+.PHONY : test/tese_application.i
+
+# target to preprocess a source file
+test/tese_application.cc.i:
+	$(MAKE) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/test/tese_application.cc.i
+.PHONY : test/tese_application.cc.i
+
+test/tese_application.s: test/tese_application.cc.s
+
+.PHONY : test/tese_application.s
+
+# target to generate assembly for a file
+test/tese_application.cc.s:
+	$(MAKE) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/test/tese_application.cc.s
+.PHONY : test/tese_application.cc.s
 
 test/tese_connection.o: test/tese_connection.cc.o
 
@@ -1655,6 +1884,87 @@ util.cc.s:
 	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/util.cc.s
 .PHONY : util.cc.s
 
+util/hash_util.o: util/hash_util.cc.o
+
+.PHONY : util/hash_util.o
+
+# target to build an object file
+util/hash_util.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/util/hash_util.cc.o
+.PHONY : util/hash_util.cc.o
+
+util/hash_util.i: util/hash_util.cc.i
+
+.PHONY : util/hash_util.i
+
+# target to preprocess a source file
+util/hash_util.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/util/hash_util.cc.i
+.PHONY : util/hash_util.cc.i
+
+util/hash_util.s: util/hash_util.cc.s
+
+.PHONY : util/hash_util.s
+
+# target to generate assembly for a file
+util/hash_util.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/util/hash_util.cc.s
+.PHONY : util/hash_util.cc.s
+
+util/json_util.o: util/json_util.cc.o
+
+.PHONY : util/json_util.o
+
+# target to build an object file
+util/json_util.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/util/json_util.cc.o
+.PHONY : util/json_util.cc.o
+
+util/json_util.i: util/json_util.cc.i
+
+.PHONY : util/json_util.i
+
+# target to preprocess a source file
+util/json_util.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/util/json_util.cc.i
+.PHONY : util/json_util.cc.i
+
+util/json_util.s: util/json_util.cc.s
+
+.PHONY : util/json_util.s
+
+# target to generate assembly for a file
+util/json_util.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/util/json_util.cc.s
+.PHONY : util/json_util.cc.s
+
+worker.o: worker.cc.o
+
+.PHONY : worker.o
+
+# target to build an object file
+worker.cc.o:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/worker.cc.o
+.PHONY : worker.cc.o
+
+worker.i: worker.cc.i
+
+.PHONY : worker.i
+
+# target to preprocess a source file
+worker.cc.i:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/worker.cc.i
+.PHONY : worker.cc.i
+
+worker.s: worker.cc.s
+
+.PHONY : worker.s
+
+# target to generate assembly for a file
+worker.cc.s:
+	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/worker.cc.s
+.PHONY : worker.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1679,6 +1989,7 @@ help:
 	@echo "... test_iomanager"
 	@echo "... test_hook"
 	@echo "... test_address"
+	@echo "... test_application"
 	@echo "... test_tcp_server"
 	@echo "... test_http"
 	@echo "... test_http_parser"
@@ -1687,6 +1998,9 @@ help:
 	@echo "... address.o"
 	@echo "... address.i"
 	@echo "... address.s"
+	@echo "... application.o"
+	@echo "... application.i"
+	@echo "... application.s"
 	@echo "... bytearry.o"
 	@echo "... bytearry.i"
 	@echo "... bytearry.s"
@@ -1735,12 +2049,30 @@ help:
 	@echo "... http/servlet.o"
 	@echo "... http/servlet.i"
 	@echo "... http/servlet.s"
+	@echo "... http/ws_server.o"
+	@echo "... http/ws_server.i"
+	@echo "... http/ws_server.s"
+	@echo "... http/ws_servlet.o"
+	@echo "... http/ws_servlet.i"
+	@echo "... http/ws_servlet.s"
+	@echo "... http/ws_session.o"
+	@echo "... http/ws_session.i"
+	@echo "... http/ws_session.s"
 	@echo "... iomanager.o"
 	@echo "... iomanager.i"
 	@echo "... iomanager.s"
+	@echo "... library.o"
+	@echo "... library.i"
+	@echo "... library.s"
 	@echo "... log.o"
 	@echo "... log.i"
 	@echo "... log.s"
+	@echo "... module.o"
+	@echo "... module.i"
+	@echo "... module.s"
+	@echo "... mutex.o"
+	@echo "... mutex.i"
+	@echo "... mutex.s"
 	@echo "... samples/my_http_server.o"
 	@echo "... samples/my_http_server.i"
 	@echo "... samples/my_http_server.s"
@@ -1759,6 +2091,9 @@ help:
 	@echo "... tcp_server.o"
 	@echo "... tcp_server.i"
 	@echo "... tcp_server.s"
+	@echo "... test/tese_application.o"
+	@echo "... test/tese_application.i"
+	@echo "... test/tese_application.s"
 	@echo "... test/tese_connection.o"
 	@echo "... test/tese_connection.i"
 	@echo "... test/tese_connection.s"
@@ -1825,6 +2160,15 @@ help:
 	@echo "... util.o"
 	@echo "... util.i"
 	@echo "... util.s"
+	@echo "... util/hash_util.o"
+	@echo "... util/hash_util.i"
+	@echo "... util/hash_util.s"
+	@echo "... util/json_util.o"
+	@echo "... util/json_util.i"
+	@echo "... util/json_util.s"
+	@echo "... worker.o"
+	@echo "... worker.i"
+	@echo "... worker.s"
 .PHONY : help
 
 

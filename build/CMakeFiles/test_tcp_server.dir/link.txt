@@ -1,1 +1,1 @@
-/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/test_tcp_server.dir/test/test_tcp_server.cc.o  -o test_tcp_server -Wl,-rpath,/home/illidan/file/cppfile/firstProject/new/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread -ldl 
+/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/test_tcp_server.dir/test/test_tcp_server.cc.o  -o test_tcp_server -Wl,-rpath,/home/illidan/file/cppfile/firstProject/new/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread -ldl -lssl -lcrypto -ljsoncpp 

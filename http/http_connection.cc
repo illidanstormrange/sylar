@@ -1,4 +1,5 @@
 #include "http_connection.h"
+#include "http_parser.h"
 #include "../uri.h"
 #include "../log.h"
 

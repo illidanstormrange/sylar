@@ -1,8 +1,17 @@
 #include "config.h"
+#include "env.h"
+#include "log.h"
+#include "util.h"
 #include <list>
 #include <map>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
 namespace sylar {
+
+static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+
 //	Config::ConfigVarMap Config::s_datas;
 ConfigVarBase::ptr Config::LookupBase(const std::string& name) {
 	RWMutexType::ReadLock lock(GetMutex());
@@ -51,6 +60,37 @@ void Config::LoadFromYaml(const YAML::Node& root) {
 		}
 	}
 }
+
+static std::map<std::string, uint64_t> s_file2modifytime;
+static sylar::Mutex s_mutex;
+
+void Config::LoadFromConfDir(const std::string& path, bool force) {
+	std::string absolute_path= sylar::EnvMgr::GetInstence()->getAbsolutePath(path);	
+	std::vector<std::string> files;
+	FSUtil::ListAllFile(files, absolute_path, ".yml");
+
+	for(auto& i : files) {
+		{
+			struct stat st;
+			lstat(i.c_str(), &st);
+			sylar::Mutex::Lock lock(s_mutex);		
+			if(!force && s_file2modifytime[i] == (uint64_t)st.st_mtime) {
+				continue;
+			}
+			s_file2modifytime[i] = st.st_mtime;
+		}
+		try {
+			YAML::Node root = YAML::LoadFile(i);
+			LoadFromYaml(root);
+			SYLAR_LOG_INFO(g_logger) << "LoadConfFile file="
+				<< i << " OK";
+		} catch(...) {
+			SYLAR_LOG_ERROR(g_logger) << "LoadConfFile file="
+				<< i << " failed";
+		}
+	}
+}
+
 void Config::Visit(std::function<void(ConfigVarBase::ptr)>& cb) {
 	RWMutexType::ReadLock lock(GetMutex());
 	ConfigVarMap& m = GetDatas();

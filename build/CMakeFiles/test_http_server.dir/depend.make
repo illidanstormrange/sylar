@@ -3,18 +3,15 @@
 
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../address.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../bytearry.h
+CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../config.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../fiber.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../http/http.h
-CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../http/http11_common.h
-CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../http/http11_parser.h
-CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../http/http_parser.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../http/http_server.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../http/http_session.h
-CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../http/httpclient_parser.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../http/servlet.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../iomanager.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../log.h
-CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../macro.h
+CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../mutex.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../noncopyable.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../scheduler.h
 CMakeFiles/test_http_server.dir/test/test_http_sever.cc.o: ../singleton.h

@@ -16,6 +16,7 @@
 /home/illidan/file/cppfile/firstProject/new/sylar/build/CMakeFiles/test_iomanager.dir
 /home/illidan/file/cppfile/firstProject/new/sylar/build/CMakeFiles/test_hook.dir
 /home/illidan/file/cppfile/firstProject/new/sylar/build/CMakeFiles/test_address.dir
+/home/illidan/file/cppfile/firstProject/new/sylar/build/CMakeFiles/test_application.dir
 /home/illidan/file/cppfile/firstProject/new/sylar/build/CMakeFiles/test_tcp_server.dir
 /home/illidan/file/cppfile/firstProject/new/sylar/build/CMakeFiles/test_http.dir
 /home/illidan/file/cppfile/firstProject/new/sylar/build/CMakeFiles/test_http_parser.dir

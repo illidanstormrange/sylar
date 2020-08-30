@@ -1,1 +1,1 @@
-/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o  -o test_scheduler -Wl,-rpath,/home/illidan/file/cppfile/firstProject/new/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread -ldl 
+/usr/bin/c++   -rdynamic -g -oO  -std=c++11 -Wall -Wno-deprecated  -rdynamic CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o  -o test_scheduler -Wl,-rpath,/home/illidan/file/cppfile/firstProject/new/sylar/build libsylar.so -L/usr/lib -lyaml-cpp -lpthread -ldl -lssl -lcrypto -ljsoncpp 

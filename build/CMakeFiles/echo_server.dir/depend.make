@@ -3,11 +3,12 @@
 
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../address.h
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../bytearry.h
+CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../config.h
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../examples/echo_server.cc
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../fiber.h
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../iomanager.h
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../log.h
-CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../macro.h
+CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../mutex.h
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../noncopyable.h
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../scheduler.h
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: ../singleton.h

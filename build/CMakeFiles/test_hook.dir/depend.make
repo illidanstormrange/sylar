@@ -6,7 +6,7 @@ CMakeFiles/test_hook.dir/test/test_hook.cc.o: ../fiber.h
 CMakeFiles/test_hook.dir/test/test_hook.cc.o: ../hook.h
 CMakeFiles/test_hook.dir/test/test_hook.cc.o: ../iomanager.h
 CMakeFiles/test_hook.dir/test/test_hook.cc.o: ../log.h
-CMakeFiles/test_hook.dir/test/test_hook.cc.o: ../macro.h
+CMakeFiles/test_hook.dir/test/test_hook.cc.o: ../mutex.h
 CMakeFiles/test_hook.dir/test/test_hook.cc.o: ../noncopyable.h
 CMakeFiles/test_hook.dir/test/test_hook.cc.o: ../scheduler.h
 CMakeFiles/test_hook.dir/test/test_hook.cc.o: ../singleton.h

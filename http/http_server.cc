@@ -1,4 +1,5 @@
 #include "http_server.h"
+
 #include "../log.h"
 #include <iostream>
 
@@ -8,15 +9,21 @@ namespace http {
 static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 
 HttpServer::HttpServer(bool keepalive
-			,sylar::IOManager* worker, sylar::IOManager* accept_worker)	
-	:TcpServer(worker, accept_worker) 
+			,sylar::IOManager* worker
+			,sylar::IOManager* io_worker
+			,sylar::IOManager* accept_worker)	
+	:TcpServer(worker, io_worker, accept_worker) 
 	,m_isKeepalive(keepalive){
 		m_dispatch.reset(new ServletDispatch);
 }
 
+void HttpServer::setName(const std::string& v) {
+	TcpServer::setName(v);
+	m_dispatch->setDefault(std::make_shared<NotFoundServlet>(v));
+}
 
 void HttpServer::handleClient(Socket::ptr client) {
-	//SYLAR_LOG_DEBUG(g_logger) << "handleClient" << *client;
+	SYLAR_LOG_DEBUG(g_logger) << "handleClient" << *client;
 	HttpSession::ptr session(new HttpSession(client));
 	do {
 		auto req = session->recvRequsest();
@@ -26,16 +33,12 @@ void HttpServer::handleClient(Socket::ptr client) {
 				<< " client:" << *client;
 			break;
 		}
-		//SYLAR_LOG_INFO(g_logger) << "requset: " << std::endl
-		//	<< *req;
 
 		HttpResponse::ptr rsp(new HttpResponse(req->getVersion()
 					,req->isClose() || m_isKeepalive));
 		rsp->setHeader("Server", getName());
 		m_dispatch->handle(req, rsp, session);
 		session->sendRespons(rsp);
-		//SYLAR_LOG_INFO(g_logger) << "rsponse: " << std::endl
-		//	<< *rsp;
 
 		if(!m_isKeepalive || req->isClose()) {
 			break;

@@ -711,6 +711,7 @@ struct LogIniter {
 				if(!i.formatter.empty()) {
 					logger->setFormatter(i.formatter);
 				}
+				SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "on_logger_conf_changed test";
 
 				logger->clearAppender();
 				for(auto& a : i.appenders) {

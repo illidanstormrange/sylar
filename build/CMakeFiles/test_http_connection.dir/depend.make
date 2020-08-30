@@ -5,14 +5,10 @@ CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../address.h
 CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../bytearry.h
 CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../fiber.h
 CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../http/http.h
-CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../http/http11_common.h
-CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../http/http11_parser.h
 CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../http/http_connection.h
-CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../http/http_parser.h
-CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../http/httpclient_parser.h
 CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../iomanager.h
 CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../log.h
-CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../macro.h
+CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../mutex.h
 CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../noncopyable.h
 CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../scheduler.h
 CMakeFiles/test_http_connection.dir/test/tese_connection.cc.o: ../singleton.h

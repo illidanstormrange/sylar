@@ -6,6 +6,7 @@ CMakeFiles/test_bytearray.dir/test/test_bytearray.cc.o: ../config.h
 CMakeFiles/test_bytearray.dir/test/test_bytearray.cc.o: ../fiber.h
 CMakeFiles/test_bytearray.dir/test/test_bytearray.cc.o: ../log.h
 CMakeFiles/test_bytearray.dir/test/test_bytearray.cc.o: ../macro.h
+CMakeFiles/test_bytearray.dir/test/test_bytearray.cc.o: ../mutex.h
 CMakeFiles/test_bytearray.dir/test/test_bytearray.cc.o: ../noncopyable.h
 CMakeFiles/test_bytearray.dir/test/test_bytearray.cc.o: ../scheduler.h
 CMakeFiles/test_bytearray.dir/test/test_bytearray.cc.o: ../singleton.h

@@ -5,6 +5,7 @@ CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o: .././config.h
 CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o: .././fiber.h
 CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o: .././log.h
 CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o: .././macro.h
+CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o: .././mutex.h
 CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o: .././noncopyable.h
 CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o: .././scheduler.h
 CMakeFiles/test_scheduler.dir/test/test_scheduler.cc.o: .././singleton.h

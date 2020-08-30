@@ -1,4 +1,5 @@
 #include "http_session.h"
+#include "http_parser.h"
 #include <iostream>
 
 namespace sylar {

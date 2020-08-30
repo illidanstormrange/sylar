@@ -4,18 +4,15 @@
 CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o
  /home/illidan/file/cppfile/firstProject/new/sylar/address.h
  /home/illidan/file/cppfile/firstProject/new/sylar/bytearry.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/config.h
  /home/illidan/file/cppfile/firstProject/new/sylar/fiber.h
  /home/illidan/file/cppfile/firstProject/new/sylar/http/http.h
- /home/illidan/file/cppfile/firstProject/new/sylar/http/http11_common.h
- /home/illidan/file/cppfile/firstProject/new/sylar/http/http11_parser.h
- /home/illidan/file/cppfile/firstProject/new/sylar/http/http_parser.h
  /home/illidan/file/cppfile/firstProject/new/sylar/http/http_server.h
  /home/illidan/file/cppfile/firstProject/new/sylar/http/http_session.h
- /home/illidan/file/cppfile/firstProject/new/sylar/http/httpclient_parser.h
  /home/illidan/file/cppfile/firstProject/new/sylar/http/servlet.h
  /home/illidan/file/cppfile/firstProject/new/sylar/iomanager.h
  /home/illidan/file/cppfile/firstProject/new/sylar/log.h
- /home/illidan/file/cppfile/firstProject/new/sylar/macro.h
+ /home/illidan/file/cppfile/firstProject/new/sylar/mutex.h
  /home/illidan/file/cppfile/firstProject/new/sylar/noncopyable.h
  /home/illidan/file/cppfile/firstProject/new/sylar/samples/my_http_server.cc
  /home/illidan/file/cppfile/firstProject/new/sylar/scheduler.h

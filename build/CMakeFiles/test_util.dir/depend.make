@@ -5,6 +5,7 @@ CMakeFiles/test_util.dir/test/test_util.cc.o: ../config.h
 CMakeFiles/test_util.dir/test/test_util.cc.o: ../fiber.h
 CMakeFiles/test_util.dir/test/test_util.cc.o: ../log.h
 CMakeFiles/test_util.dir/test/test_util.cc.o: ../macro.h
+CMakeFiles/test_util.dir/test/test_util.cc.o: ../mutex.h
 CMakeFiles/test_util.dir/test/test_util.cc.o: ../noncopyable.h
 CMakeFiles/test_util.dir/test/test_util.cc.o: ../scheduler.h
 CMakeFiles/test_util.dir/test/test_util.cc.o: ../singleton.h
